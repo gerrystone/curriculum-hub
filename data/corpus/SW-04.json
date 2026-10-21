@@ -1,0 +1,122 @@
+{
+  "documentId": "SW-04",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Ecosystems and Interdependence (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W10",
+      "week": 10,
+      "topic": "Ecosystems and interdependence: Habitats, populations and communities",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Plants and animals live in different places",
+        "Classifying living things"
+      ],
+      "learningOutcomes": [
+        "Define habitat, population, community and ecosystem",
+        "Classify environmental factors as biotic or abiotic",
+        "Use a quadrat to estimate the number of plants in two different areas"
+      ],
+      "keyConcepts": [
+        "habitat is the place where an organism lives",
+        "population is all organisms of one species in an area",
+        "community is all populations living in an area",
+        "ecosystem is a community together with its non-living environment",
+        "biotic factors are living (predators, food, competition)",
+        "abiotic factors are non-living (light, temperature, water, soil)",
+        "random sampling with quadrats"
+      ],
+      "learningActivities": [
+        "Learners sample plants in a sunny and a shaded area of the school grounds using randomly placed quadrats",
+        "Learners calculate the mean number of plants per quadrat for each area",
+        "Learners list biotic and abiotic factors that might explain differences",
+        "Learners sort example factors into biotic and abiotic"
+      ],
+      "resources": [
+        "Quadrats (0.5 m or 1 m)",
+        "Clipboards, tape measures",
+        "Random number cards for coordinates"
+      ],
+      "assessment": "Define habitat and give one biotic factor and one abiotic factor affecting organisms in a pond.",
+      "teacherNotes": "Learners confuse habitat with ecosystem. Make clear a habitat is where a species lives, while an ecosystem includes all organisms and the non-living environment. Learners often think abiotic factors are not important to living things. Stress random placement of quadrats to avoid bias."
+    },
+    {
+      "entryId": "W11",
+      "week": 11,
+      "topic": "Ecosystems and interdependence: Food chains and food webs",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Plants make their own food using sunlight",
+        "Animals feed on plants or other animals"
+      ],
+      "learningOutcomes": [
+        "Construct food chains with arrows pointing in the direction of energy transfer",
+        "Identify producers, primary consumers, secondary consumers and decomposers",
+        "Predict the effects of removing one organism from a food web"
+      ],
+      "keyConcepts": [
+        "producer",
+        "primary consumer",
+        "secondary consumer",
+        "tertiary consumer",
+        "decomposer",
+        "arrows show the direction of energy transfer from the organism eaten to the organism that eats it",
+        "food web is a set of linked food chains"
+      ],
+      "learningActivities": [
+        "Learners create a food web with yarn using organism cards (grass, grasshopper, zebra, frog, snake, lion, fungi)",
+        "Learners identify each organism's trophic role",
+        "Learners remove one organism and predict effects on others",
+        "Learners draw a food chain from their own local ecosystem"
+      ],
+      "resources": [
+        "Organism cards",
+        "Yarn or string",
+        "Sticky notes and chart paper"
+      ],
+      "assessment": "In the food chain grass, grasshopper, frog, snake, identify the producer and the secondary consumer and predict what happens to grasshoppers if all frogs die.",
+      "teacherNotes": "Learners often draw arrows in the wrong direction, pointing from the eater to the food. Learners may think the Sun is a producer; producers are organisms that make food by photosynthesis. Learners may assume removing a predator only benefits the prey; indirect effects on other organisms should be discussed."
+    },
+    {
+      "entryId": "W12",
+      "week": 12,
+      "topic": "Ecosystems and interdependence: Interdependence and human impact",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Food chains and food webs",
+        "Photosynthesis makes food in plants"
+      ],
+      "learningOutcomes": [
+        "Explain interdependence using pollination and predator-prey relationships",
+        "Describe how deforestation, pollution and overfishing affect ecosystems",
+        "Suggest actions that can protect ecosystems"
+      ],
+      "keyConcepts": [
+        "interdependence",
+        "pollination by insects",
+        "predator-prey relationships",
+        "competition",
+        "deforestation",
+        "pollution",
+        "overfishing",
+        "conservation"
+      ],
+      "learningActivities": [
+        "Learners run a predator-prey simulation with beans or cards and graph both populations",
+        "Learners analyse a case study of pesticide use that reduces insect pollinators",
+        "Learners trace the impact of one human activity through a food web",
+        "Learners propose a conservation action plan for a local ecosystem"
+      ],
+      "resources": [
+        "Beans or counters for simulation",
+        "Case study handout",
+        "Chart paper"
+      ],
+      "assessment": "Explain how the loss of bees from a meadow could affect both plants and animals.",
+      "teacherNotes": "Learners often believe losing one species does not affect others. Learners also think predator and prey populations change independently. Use graphs to show linked cycles. Choose case studies relevant to learners' own region where possible."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "documentId": "AS-02",
+  "documentType": "sample_assessment",
+  "title": "Grade 8 Integrated Science Sample Assessment: Ecosystems, Energy and Circuits (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "items": [
+    {
+      "itemId": "AS-ECO-01",
+      "topic": "Ecosystems and interdependence: Habitats, populations and communities",
+      "itemType": "short_response",
+      "difficulty": "foundational",
+      "question": "Define the term habitat. Then give one biotic factor and one abiotic factor that affect the organisms living in a pond.",
+      "expectedAnswer": "A habitat is the place where an organism lives. Biotic factor examples: predators, food supply, competition or disease. Abiotic factor examples: temperature, light intensity, oxygen concentration or pH.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: habitat is the place where an organism lives",
+        "1 mark: a valid living (biotic) factor",
+        "1 mark: a valid non-living (abiotic) factor"
+      ],
+      "misconceptionTested": "A habitat is the same as an ecosystem; abiotic factors do not affect living things."
+    },
+    {
+      "itemId": "AS-ECO-02",
+      "topic": "Ecosystems and interdependence: Food chains and food webs",
+      "itemType": "application",
+      "difficulty": "advanced",
+      "question": "In a grassland, grass is eaten by grasshoppers and zebras. Grasshoppers are eaten by frogs. Frogs are eaten by snakes. Zebras are eaten by lions. Fungi break down dead organisms. (a) Write the longest food chain using arrows. (b) Name the producer and the decomposer. (c) Predict what happens to the number of grasshoppers if all of the frogs die, and explain.",
+      "expectedAnswer": "(a) grass -> grasshopper -> frog -> snake. (b) Producer: grass; decomposer: fungi. (c) The number of grasshoppers would increase because fewer grasshoppers are eaten by predators.",
+      "marks": 6,
+      "markingGuide": [
+        "1 mark: correct four-organism chain in the correct order",
+        "1 mark: arrows point from the organism eaten to the organism that eats it",
+        "1 mark: producer is grass",
+        "1 mark: decomposer is fungi",
+        "1 mark: grasshopper numbers increase",
+        "1 mark: reason is that fewer grasshoppers are eaten"
+      ],
+      "misconceptionTested": "Arrows show who eats whom, pointing from the eater to the food."
+    },
+    {
+      "itemId": "AS-ECO-03",
+      "topic": "Ecosystems and interdependence: Interdependence and human impact",
+      "itemType": "explanation",
+      "difficulty": "advanced",
+      "question": "Farmers use pesticides that kill most flying insects, including bees. Explain how this could affect the plants in a nearby meadow and the animals that feed on their seeds and fruits.",
+      "expectedAnswer": "Bees pollinate flowers, so fewer bees means less pollination. Fewer seeds and fruits are produced and the plant population may decline. Animals that feed on the seeds and fruits have less food, so their populations may decrease.",
+      "marks": 4,
+      "markingGuide": [
+        "1 mark: bees pollinate flowers",
+        "1 mark: less pollination leads to fewer seeds and fruits",
+        "1 mark: plant population or reproduction declines",
+        "1 mark: animals that eat seeds and fruits have less food and their numbers decrease"
+      ],
+      "misconceptionTested": "Losing one species has no effect on other species."
+    },
+    {
+      "itemId": "AS-ENE-01",
+      "topic": "Energy transfer: Energy stores and transfers",
+      "itemType": "short_response",
+      "difficulty": "foundational",
+      "question": "A battery-powered torch is switched on. Name the energy store in the battery and describe the energy transfers that happen in the torch.",
+      "expectedAnswer": "The battery has a chemical energy store. Energy is transferred electrically through the circuit to the lamp, and then to the surroundings by light (useful) and by heating as thermal energy (wasted).",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: chemical store",
+        "1 mark: transferred electrically (by electric current) to the lamp",
+        "1 mark: transferred by light and by heating to the surroundings"
+      ],
+      "misconceptionTested": "Energy is used up when a device operates."
+    },
+    {
+      "itemId": "AS-ENE-02",
+      "topic": "Energy transfer: Conduction, convection and radiation",
+      "itemType": "explanation",
+      "difficulty": "developing",
+      "question": "(a) Name the process by which energy from the Sun reaches Earth across the vacuum of space and explain why conduction and convection cannot do this. (b) Explain, using density, why warm air rises above a heater.",
+      "expectedAnswer": "(a) Radiation (infrared waves). Conduction and convection need particles to pass on the energy, but space is a vacuum with almost no particles. (b) Warm air expands and becomes less dense than the cooler air around it, so the denser cool air pushes it upwards.",
+      "marks": 5,
+      "markingGuide": [
+        "1 mark: radiation",
+        "1 mark: radiation does not need particles or travels through a vacuum",
+        "1 mark: conduction and convection need particles",
+        "1 mark: warm air expands and is less dense",
+        "1 mark: less dense warm air is pushed up by the denser cooler air"
+      ],
+      "misconceptionTested": "Heat rises, and radiation needs air to travel."
+    },
+    {
+      "itemId": "AS-ENE-03",
+      "topic": "Energy transfer: Efficiency and wasted energy",
+      "itemType": "application",
+      "difficulty": "advanced",
+      "question": "A motor takes in 200 J of electrical energy and transfers 150 J as useful kinetic energy. (a) Calculate the efficiency of the motor. (b) State what happens to the remaining energy and whether it is destroyed.",
+      "expectedAnswer": "(a) Efficiency = 150 / 200 x 100 = 75%. (b) The remaining 50 J is transferred to the surroundings as thermal energy (and sound). It is not destroyed because energy is conserved.",
+      "marks": 4,
+      "markingGuide": [
+        "1 mark: uses useful output / total input x 100",
+        "1 mark: 75%",
+        "1 mark: remaining 50 J is wasted and dissipated to the surroundings as thermal energy",
+        "1 mark: energy is not destroyed (energy is conserved)"
+      ],
+      "misconceptionTested": "Wasted energy disappears or is destroyed."
+    },
+    {
+      "itemId": "AS-CIR-01",
+      "topic": "Simple electrical circuits: Circuit components and circuit diagrams",
+      "itemType": "application",
+      "difficulty": "foundational",
+      "question": "Describe a circuit diagram, drawn with standard symbols, that has a cell, a switch and a lamp connected in series. Then explain why the lamp does not light when the switch is open.",
+      "expectedAnswer": "The diagram shows the cell symbol, switch symbol and lamp symbol connected one after another in one closed loop with straight wires and no gaps. When the switch is open there is a gap in the loop, so the circuit is not complete and current cannot flow.",
+      "marks": 4,
+      "markingGuide": [
+        "1 mark: correct symbols for cell, switch and lamp",
+        "1 mark: components connected in series in a single loop",
+        "1 mark: open switch creates a gap or break in the circuit",
+        "1 mark: no complete circuit means no current flows through the lamp"
+      ],
+      "misconceptionTested": "A lamp can light with a connection to only one terminal of the cell."
+    },
+    {
+      "itemId": "AS-CIR-02",
+      "topic": "Simple electrical circuits: Current and voltage in series circuits",
+      "itemType": "application",
+      "difficulty": "developing",
+      "question": "Two identical lamps are connected in series to a 3.0 V battery. An ammeter next to the battery reads 0.20 A. (a) State the current between the two lamps. (b) Calculate the voltage across each lamp. (c) State how a voltmeter must be connected to measure the voltage across one lamp.",
+      "expectedAnswer": "(a) 0.20 A, because the current is the same everywhere in a series circuit. (b) The identical lamps share the voltage equally, so 3.0 / 2 = 1.5 V each. (c) The voltmeter is connected in parallel across the lamp.",
+      "marks": 4,
+      "markingGuide": [
+        "1 mark: 0.20 A",
+        "1 mark: voltage is shared equally between identical lamps",
+        "1 mark: 1.5 V",
+        "1 mark: voltmeter connected in parallel across the lamp"
+      ],
+      "misconceptionTested": "Current is used up by the first lamp, or an ammeter is connected in parallel."
+    },
+    {
+      "itemId": "AS-CIR-03",
+      "topic": "Simple electrical circuits: Parallel circuits and comparing circuits",
+      "itemType": "application",
+      "difficulty": "advanced",
+      "question": "Two identical lamps are connected in parallel to a 3.0 V battery. The ammeter next to the battery reads 0.60 A. (a) State the voltage across each lamp. (b) Calculate the current through each lamp. (c) One lamp breaks. State what happens to the other lamp and explain why.",
+      "expectedAnswer": "(a) 3.0 V, because each branch has the full supply voltage. (b) The total current is the sum of the branch currents and the lamps are identical, so each carries 0.60 / 2 = 0.30 A. (c) The other lamp stays lit because it is on a separate branch that still forms a complete circuit with the battery.",
+      "marks": 5,
+      "markingGuide": [
+        "1 mark: 3.0 V",
+        "1 mark: total current is shared equally between identical branches",
+        "1 mark: 0.30 A",
+        "1 mark: the other lamp stays on",
+        "1 mark: it is on its own branch that is still a complete circuit"
+      ],
+      "misconceptionTested": "Voltage is shared between parallel branches, or one broken lamp stops the whole circuit."
+    }
+  ]
+}

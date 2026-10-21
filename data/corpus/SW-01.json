@@ -1,0 +1,119 @@
+{
+  "documentId": "SW-01",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Cells and Organisation (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W01",
+      "week": 1,
+      "topic": "Cells and organisation: Observing cells with a light microscope",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Living things are made of smaller parts called cells",
+        "Safe handling of glass slides and laboratory equipment"
+      ],
+      "learningOutcomes": [
+        "Identify the parts of a light microscope and state the function of each",
+        "Prepare a wet-mount slide of onion epidermis and focus it first on low power and then on high power",
+        "Produce a labelled biological drawing of observed cells and calculate total magnification"
+      ],
+      "keyConcepts": [
+        "cell as the basic unit of life",
+        "light microscope parts: eyepiece lens, objective lenses, stage, light source, coarse and fine focus wheels",
+        "total magnification = eyepiece magnification x objective magnification",
+        "biological drawing conventions: title, single clear lines, no shading, labels"
+      ],
+      "learningActivities": [
+        "Teacher demonstrates the parts of a light microscope using a real microscope or a projected labelled diagram",
+        "Learners work in pairs to prepare a wet-mount slide of onion epidermis stained with iodine solution, lowering the coverslip at an angle to avoid air bubbles",
+        "Learners focus on low power first, then switch to high power and use only the fine focus wheel",
+        "Learners make a pencil drawing of three or four neighbouring cells with a title, labels and the total magnification calculated"
+      ],
+      "resources": [
+        "Light microscopes (one per pair)",
+        "Onion bulb, iodine solution, droppers, forceps, glass slides and coverslips",
+        "Labelled microscope diagram handout",
+        "Plain paper, sharp pencils and rulers"
+      ],
+      "assessment": "Exit ticket: Name the part of the microscope that makes the image sharper, and calculate the total magnification when the eyepiece lens is x10 and the objective lens is x40.",
+      "teacherNotes": "Learners often start on high power and break slides, so insist on low-power focusing first. If microscopes are limited, use rotating stations with projected images or printed micrographs. Learners tend to shade and colour drawings; remind them that biological drawings use clear single lines. Iodine stains skin and clothing, so supervise handling."
+    },
+    {
+      "entryId": "W02",
+      "week": 2,
+      "topic": "Cells and organisation: Plant and animal cell structures and functions",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Use of a light microscope to observe cells",
+        "Cells are the basic unit of living things"
+      ],
+      "learningOutcomes": [
+        "Identify the nucleus, cell membrane, cytoplasm, mitochondria, cell wall, chloroplasts and permanent vacuole on diagrams and micrographs",
+        "State the function of each cell structure",
+        "Compare plant and animal cells and identify the structures found only in plant cells"
+      ],
+      "keyConcepts": [
+        "nucleus controls cell activities and contains genetic material",
+        "cell membrane controls what enters and leaves the cell",
+        "cytoplasm is where many chemical reactions happen",
+        "mitochondria release energy from food in respiration",
+        "cell wall supports plant cells",
+        "chloroplasts contain chlorophyll and carry out photosynthesis",
+        "permanent vacuole contains cell sap"
+      ],
+      "learningActivities": [
+        "Learners label blank outlines of a plant cell and an animal cell using a word bank and then check against micrographs",
+        "Learners observe a leaf of Elodea (pondweed) or moss under the microscope to see chloroplasts and the cell wall",
+        "Learners build a 3D cell model from recycled materials (plastic bag, beads, plasticine) and explain what each part represents",
+        "Learners complete a comparison table of structures found in plant cells, animal cells or both"
+      ],
+      "resources": [
+        "Prepared slides or printed micrographs of animal cells",
+        "Elodea or moss leaves",
+        "Blank cell outlines and word bank",
+        "Recycled materials and plasticine for model building"
+      ],
+      "assessment": "Short quiz: State the function of the nucleus, mitochondria and chloroplasts, and name two structures found in plant cells but not in animal cells.",
+      "teacherNotes": "Onion epidermis has no chloroplasts because it grows underground, so use Elodea or moss to show them. Learners often believe plant cells have no mitochondria; stress that all living cells respire, so plant cells have both mitochondria and chloroplasts. Learners may also confuse the cell wall with the cell membrane; the membrane is present in all cells and controls entry and exit."
+    },
+    {
+      "entryId": "W03",
+      "week": 3,
+      "topic": "Cells and organisation: Specialised cells and levels of organisation",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Structures and functions of plant and animal cells",
+        "Organs such as the heart, stomach and lungs"
+      ],
+      "learningOutcomes": [
+        "Define specialised cell, tissue, organ and organ system and give one example of each",
+        "Explain how the structure of a root hair cell, a red blood cell and a muscle cell suits its function",
+        "Arrange cell, tissue, organ, organ system and organism in order of increasing complexity"
+      ],
+      "keyConcepts": [
+        "specialised cells have structures adapted to their function",
+        "tissue is a group of similar cells working together",
+        "organ is made of different tissues working together",
+        "organ system is a group of organs working together",
+        "organism is a complete living thing",
+        "structure is related to function"
+      ],
+      "learningActivities": [
+        "Learners sort cards for the human digestive system into the sequence: stomach lining cell, muscle tissue, stomach, digestive system, human",
+        "Learners match images of root hair cells, red blood cells and muscle cells to function and structure descriptions",
+        "Learners create a zoom-in poster showing one organ system from organism down to cell",
+        "Learners write one sentence for each specialised cell linking a structural feature to its function"
+      ],
+      "resources": [
+        "Level-of-organisation card sets",
+        "Micrographs of root hair, red blood and muscle cells",
+        "Poster paper and markers"
+      ],
+      "assessment": "Explain how a red blood cell is adapted to carry oxygen and place it correctly in the sequence from cell to organism.",
+      "teacherNotes": "Learners often think all cells have a nucleus; mature red blood cells in humans do not, which leaves more room for haemoglobin. Learners confuse tissues with organs, so repeatedly use the phrase 'different tissues working together' for organs. The biconcave shape gives a larger surface area for absorbing oxygen."
+    }
+  ]
+}

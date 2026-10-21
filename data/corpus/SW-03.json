@@ -1,0 +1,118 @@
+{
+  "documentId": "SW-03",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Forces and Motion (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W07",
+      "week": 7,
+      "topic": "Forces and motion: Types of forces, newtons and weight",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "A force is a push or a pull",
+        "Mass is measured in kilograms"
+      ],
+      "learningOutcomes": [
+        "Classify forces as contact or non-contact and give an example of each",
+        "Measure force in newtons using a newtonmeter",
+        "Calculate weight using weight = mass x gravitational field strength with g = 10 N/kg"
+      ],
+      "keyConcepts": [
+        "contact forces: friction, tension, air resistance, upthrust",
+        "non-contact forces: gravity, magnetic force, electrostatic force",
+        "force is measured in newtons (N)",
+        "mass is the amount of matter in kg and does not change with location",
+        "weight is the force of gravity on a mass, measured in newtons",
+        "W = m x g"
+      ],
+      "learningActivities": [
+        "Learners sort force cards into contact and non-contact",
+        "Learners measure the weights of classroom objects with newtonmeters and calculate each mass using g = 10 N/kg",
+        "Learners compare predicted and measured values and discuss differences",
+        "Learners draw force arrows on pictures showing weight and contact force"
+      ],
+      "resources": [
+        "Newtonmeters (10 N and 20 N)",
+        "Small objects with known masses",
+        "Force cards"
+      ],
+      "assessment": "Calculate the weight of a 3 kg bag on Earth using g = 10 N/kg and state why its mass would be unchanged on the Moon.",
+      "teacherNotes": "Learners often use 'weight' and 'mass' interchangeably in everyday speech. Use g = 10 N/kg as a rounded value (it is about 9.8 N/kg on Earth) and about 1.6 N/kg on the Moon. Note that mass stays constant but weight changes with gravitational field strength."
+    },
+    {
+      "entryId": "W08",
+      "week": 8,
+      "topic": "Forces and motion: Balanced and unbalanced forces",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Forces are measured in newtons",
+        "Force arrows show the size and direction of forces"
+      ],
+      "learningOutcomes": [
+        "Draw force diagrams and determine the resultant force on an object",
+        "Explain that balanced forces produce no change in motion and unbalanced forces change speed or direction",
+        "Describe the effect of friction on moving objects"
+      ],
+      "keyConcepts": [
+        "resultant force",
+        "balanced forces have a resultant of zero",
+        "unbalanced forces cause acceleration, deceleration or change of direction",
+        "an object at rest or moving at constant speed in a straight line has balanced forces",
+        "friction opposes motion"
+      ],
+      "learningActivities": [
+        "Learners play tug-of-war with ropes to compare equal and unequal pulls",
+        "Learners pull a trolley using hanging masses over a pulley and describe the motion for different masses",
+        "Learners draw force diagrams for a book on a table, a car at constant speed and a car braking",
+        "Learners calculate the resultant force for given one-dimensional force pairs"
+      ],
+      "resources": [
+        "Trolleys, pulleys, string and slotted masses",
+        "Ropes for tug-of-war",
+        "Force diagram worksheets"
+      ],
+      "assessment": "A car moves at a constant speed with a driving force of 800 N. State the size of the resistive forces and explain.",
+      "teacherNotes": "A common difficulty is the belief that a force is needed to keep an object moving at constant speed. Show that constant speed requires balanced forces. Learners also think that no motion means no forces act; stationary objects still have balanced forces acting. Draw arrows to scale where possible."
+    },
+    {
+      "entryId": "W09",
+      "week": 9,
+      "topic": "Forces and motion: Speed, distance and time",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Measurement of distance and time",
+        "Basic rearranging of formulae"
+      ],
+      "learningOutcomes": [
+        "Calculate speed using speed = distance / time with units m/s and km/h",
+        "Plot and interpret distance-time graphs",
+        "Describe the motion of an object from the shape of a distance-time graph"
+      ],
+      "keyConcepts": [
+        "speed = distance divided by time",
+        "units m/s and km/h",
+        "average speed",
+        "distance-time graph",
+        "gradient of the line represents speed",
+        "horizontal line means the object is stationary"
+      ],
+      "learningActivities": [
+        "Learners time a toy car or a walking learner over a measured 10 m course and calculate speed",
+        "Learners plot a distance-time graph from collected data",
+        "Learners match distance-time graphs to descriptions of journeys",
+        "Learners solve speed problems that include unit conversion between m/s and km/h"
+      ],
+      "resources": [
+        "Toy cars or ramps",
+        "Metre rules or trundle wheel, stopwatches",
+        "Graph paper",
+        "Graph matching cards"
+      ],
+      "assessment": "A cyclist travels 600 m in 120 s. Calculate the average speed and describe what a horizontal section on the distance-time graph means.",
+      "teacherNotes": "Learners often read a distance-time graph as a picture of the path or think a horizontal line means constant speed; it means the object is stationary. A steeper line means a higher speed. To convert m/s to km/h, multiply by 3.6."
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "documentId": "AS-01",
+  "documentType": "sample_assessment",
+  "title": "Grade 8 Integrated Science Sample Assessment: Cells, Matter and Forces (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "items": [
+    {
+      "itemId": "AS-CEL-01",
+      "topic": "Cells and organisation: Observing cells with a light microscope",
+      "itemType": "multiple_choice",
+      "difficulty": "foundational",
+      "question": "A learner views onion cells using a x10 eyepiece lens and a x40 objective lens. What is the total magnification? A) x4  B) x50  C) x400  D) x4000",
+      "expectedAnswer": "C) x400. Total magnification = eyepiece magnification x objective magnification = 10 x 40 = 400.",
+      "marks": 1,
+      "markingGuide": [
+        "1 mark: selects C (x400)"
+      ],
+      "misconceptionTested": "Adding the magnifications of the two lenses instead of multiplying them (the x50 option)."
+    },
+    {
+      "itemId": "AS-CEL-02",
+      "topic": "Cells and organisation: Plant and animal cell structures and functions",
+      "itemType": "short_response",
+      "difficulty": "developing",
+      "question": "State the function of each of the following cell structures: (a) nucleus, (b) mitochondria, (c) chloroplast.",
+      "expectedAnswer": "(a) The nucleus controls the activities of the cell and contains genetic material. (b) Mitochondria are the site of respiration and release energy from food. (c) Chloroplasts contain chlorophyll and are where photosynthesis takes place.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: nucleus controls cell activities or contains genetic material",
+        "1 mark: mitochondria release energy through respiration",
+        "1 mark: chloroplast is the site of photosynthesis or contains chlorophyll to absorb light"
+      ],
+      "misconceptionTested": "Plant cells do not have mitochondria; mitochondria 'make' energy rather than release it."
+    },
+    {
+      "itemId": "AS-CEL-03",
+      "topic": "Cells and organisation: Specialised cells and levels of organisation",
+      "itemType": "explanation",
+      "difficulty": "advanced",
+      "question": "(a) Put these levels of organisation in order from smallest to largest: organ, cell, organism, tissue, organ system. (b) Explain two ways in which the structure of a red blood cell helps it to carry oxygen.",
+      "expectedAnswer": "(a) cell, tissue, organ, organ system, organism. (b) Any two with explanation: it contains haemoglobin which binds to oxygen; it has no nucleus, leaving more space for haemoglobin; its biconcave disc shape gives a large surface area for absorbing oxygen and lets it squeeze through narrow capillaries.",
+      "marks": 6,
+      "markingGuide": [
+        "2 marks: all five levels in the correct order (1 mark if only one level is out of place)",
+        "1 mark: first adaptation stated (haemoglobin, no nucleus or biconcave shape)",
+        "1 mark: link to oxygen transport for the first adaptation",
+        "1 mark: second adaptation stated",
+        "1 mark: link to oxygen transport for the second adaptation"
+      ],
+      "misconceptionTested": "All cells have a nucleus; tissues and organs are the same level of organisation."
+    },
+    {
+      "itemId": "AS-MAT-01",
+      "topic": "Matter and the particle model: States of matter and particle arrangement",
+      "itemType": "short_response",
+      "difficulty": "developing",
+      "question": "Describe the arrangement and movement of particles in a gas and use this to explain why a gas can be compressed easily.",
+      "expectedAnswer": "Gas particles are far apart and move randomly at high speed. There is a lot of empty space between the particles, so they can be pushed closer together when the gas is compressed.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: particles are far apart",
+        "1 mark: particles move randomly and at high speed",
+        "1 mark: explains compression as reducing the large spaces between particles"
+      ],
+      "misconceptionTested": "The particles themselves are squashed, or there is air between the particles."
+    },
+    {
+      "itemId": "AS-MAT-02",
+      "topic": "Matter and the particle model: Changes of state and particle energy",
+      "itemType": "explanation",
+      "difficulty": "advanced",
+      "question": "Ice at 0 degrees Celsius is heated steadily. The temperature stays at 0 degrees Celsius until all of the ice has melted, even though energy is still being supplied. Explain this using the particle model.",
+      "expectedAnswer": "The energy supplied is used to overcome the forces of attraction holding the particles in their fixed positions so the particles can move past each other. It does not increase the average speed of the particles, so the temperature does not rise until all of the ice has melted.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: energy is absorbed or supplied to the ice",
+        "1 mark: energy is used to overcome or weaken forces between particles so the solid becomes a liquid",
+        "1 mark: energy does not increase the average speed of particles, so temperature stays constant"
+      ],
+      "misconceptionTested": "Temperature keeps rising during a change of state."
+    },
+    {
+      "itemId": "AS-MAT-03",
+      "topic": "Matter and the particle model: Diffusion and gas pressure",
+      "itemType": "application",
+      "difficulty": "developing",
+      "question": "A drop of food colouring is added to two identical beakers of water without stirring, one at 20 degrees Celsius and one at 60 degrees Celsius. Predict which beaker the colour spreads through faster and explain using particles.",
+      "expectedAnswer": "The colour spreads faster in the water at 60 degrees Celsius. The particles in hot water have more energy and move faster, so the colour particles mix through the water more quickly by diffusion.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: predicts the hot water (60 degrees Celsius)",
+        "1 mark: particles have more energy or move faster in hot water",
+        "1 mark: colour particles spread or mix more quickly by diffusion"
+      ],
+      "misconceptionTested": "Diffusion needs stirring or currents, or it is unrelated to particle movement."
+    },
+    {
+      "itemId": "AS-FOR-01",
+      "topic": "Forces and motion: Types of forces, newtons and weight",
+      "itemType": "application",
+      "difficulty": "foundational",
+      "question": "A bag of rice has a mass of 2.5 kg. Calculate its weight on Earth using g = 10 N/kg and show your working. State whether the mass of the rice would change on the Moon and give a reason.",
+      "expectedAnswer": "Weight = mass x g = 2.5 x 10 = 25 N. The mass would not change on the Moon because mass is the amount of matter in the rice and does not depend on location. Only the weight would change.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: uses weight = mass x g",
+        "1 mark: correct answer of 25 N with unit",
+        "1 mark: mass unchanged with reason that mass is the amount of matter or does not depend on gravity"
+      ],
+      "misconceptionTested": "Mass and weight are the same thing."
+    },
+    {
+      "itemId": "AS-FOR-02",
+      "topic": "Forces and motion: Balanced and unbalanced forces",
+      "itemType": "explanation",
+      "difficulty": "developing",
+      "question": "A car travels in a straight line at a constant speed of 20 m/s. The driving force is 1500 N. State the size of the total resistive force on the car and explain how you know.",
+      "expectedAnswer": "The resistive force is 1500 N. The car moves at constant speed, so the forces are balanced and the resultant force is zero.",
+      "marks": 3,
+      "markingGuide": [
+        "1 mark: 1500 N",
+        "1 mark: forces are balanced",
+        "1 mark: resultant force is zero so there is no change in speed"
+      ],
+      "misconceptionTested": "A larger forward force is needed to keep an object moving at constant speed."
+    },
+    {
+      "itemId": "AS-FOR-03",
+      "topic": "Forces and motion: Speed, distance and time",
+      "itemType": "application",
+      "difficulty": "developing",
+      "question": "A cyclist travels 600 m in 120 s. (a) Calculate the average speed. (b) State what a horizontal line on a distance-time graph shows. (c) Describe how the line for a faster cyclist would look different.",
+      "expectedAnswer": "(a) Speed = distance / time = 600 / 120 = 5 m/s. (b) The cyclist is stationary because the distance does not change. (c) The line would be steeper.",
+      "marks": 4,
+      "markingGuide": [
+        "1 mark: uses speed = distance / time",
+        "1 mark: 5 m/s with correct unit",
+        "1 mark: horizontal line means stationary or not moving",
+        "1 mark: faster cyclist gives a steeper line"
+      ],
+      "misconceptionTested": "A horizontal line on a distance-time graph means constant speed."
+    }
+  ]
+}

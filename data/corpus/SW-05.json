@@ -1,0 +1,121 @@
+{
+  "documentId": "SW-05",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Energy Transfer (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W13",
+      "week": 13,
+      "topic": "Energy transfer: Energy stores and transfers",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Everyday uses of energy",
+        "Basic units such as joules"
+      ],
+      "learningOutcomes": [
+        "Identify chemical, kinetic, gravitational potential, elastic potential and thermal energy stores",
+        "Describe energy transfers by mechanical work, electrical current, heating and waves (light and sound)",
+        "State that energy is conserved and is measured in joules"
+      ],
+      "keyConcepts": [
+        "energy stores",
+        "energy transfers",
+        "conservation of energy",
+        "energy cannot be created or destroyed",
+        "energy is measured in joules (J)",
+        "useful energy and wasted energy"
+      ],
+      "learningActivities": [
+        "Learners roll a ball down a ramp and describe the changes in energy stores",
+        "Learners investigate a stretched elastic band, a swinging pendulum and a hand warmer",
+        "Learners draw energy transfer diagrams for a torch, a bouncing ball and a person eating a meal then running",
+        "Learners match everyday devices to the energy transfers they cause"
+      ],
+      "resources": [
+        "Ramps and balls",
+        "Elastic bands and pendulum set-ups",
+        "Torches and batteries",
+        "Energy store cards"
+      ],
+      "assessment": "Describe the energy transfers when a battery-powered torch is switched on.",
+      "teacherNotes": "Learners often say energy is 'used up' or 'made'; stress that energy is transferred and the total remains the same. Avoid naming energy as a substance that flows like a liquid. Always state the store the energy starts in and where it ends up."
+    },
+    {
+      "entryId": "W14",
+      "week": 14,
+      "topic": "Energy transfer: Conduction, convection and radiation",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Particle model of solids, liquids and gases",
+        "Energy transfers by heating"
+      ],
+      "learningOutcomes": [
+        "Describe conduction as the transfer of energy through vibrating particles in solids",
+        "Explain convection in liquids and gases using changes in density",
+        "Describe radiation as the transfer of energy by infrared waves that does not need particles"
+      ],
+      "keyConcepts": [
+        "conduction",
+        "convection",
+        "radiation",
+        "infrared radiation",
+        "thermal conductors and insulators",
+        "density",
+        "hot fluid expands, becomes less dense and rises"
+      ],
+      "learningActivities": [
+        "Learners heat one end of metal rods with wax and pins attached and time how quickly pins fall",
+        "Learners observe convection currents by placing a potassium permanganate crystal at the bottom of a beaker of water and gently warming one side (teacher demonstration)",
+        "Learners compare the temperature rise of a black can and a shiny can placed near a lamp",
+        "Learners classify everyday situations as conduction, convection or radiation"
+      ],
+      "resources": [
+        "Metal rods of different materials, wax, pins, burner or hot-water bath",
+        "Beakers, potassium permanganate crystals",
+        "Black and shiny cans, lamp, thermometers"
+      ],
+      "assessment": "Explain how energy from the Sun reaches Earth and why conduction and convection cannot transfer it.",
+      "teacherNotes": "Learners often say 'heat rises' or 'cold travels'; it is warm air that rises because it is less dense. Many learners think radiation needs air; infrared radiation travels through a vacuum. Supervise heating and hot water."
+    },
+    {
+      "entryId": "W15",
+      "week": 15,
+      "topic": "Energy transfer: Efficiency and wasted energy",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Energy stores and transfers",
+        "Calculating percentages"
+      ],
+      "learningOutcomes": [
+        "Calculate efficiency using useful energy output divided by total energy input x 100%",
+        "Explain what happens to wasted energy and why it is not destroyed",
+        "Suggest ways to reduce energy waste such as insulation and lubrication"
+      ],
+      "keyConcepts": [
+        "efficiency",
+        "useful output energy",
+        "total input energy",
+        "wasted energy dissipates to the surroundings as thermal energy",
+        "Sankey diagram",
+        "insulation",
+        "conservation of energy"
+      ],
+      "learningActivities": [
+        "Learners compare LED and filament lamps using data on input and useful output energy and calculate efficiency",
+        "Learners draw Sankey diagrams for a motor and a lamp",
+        "Learners test cups with and without lids or insulation and measure cooling",
+        "Learners suggest design changes to reduce energy waste in a device"
+      ],
+      "resources": [
+        "Data tables for lamps",
+        "Cups, lids, insulating materials, thermometers",
+        "Graph paper and Sankey diagram templates"
+      ],
+      "assessment": "A motor takes in 200 J of electrical energy and transfers 150 J usefully. Calculate its efficiency and state where the remaining energy goes.",
+      "teacherNotes": "Learners think wasted energy disappears; it is transferred to the surroundings, mostly as thermal energy. Efficiency can never exceed 100% because of conservation of energy. Present efficiency as a percentage or decimal consistently."
+    }
+  ]
+}

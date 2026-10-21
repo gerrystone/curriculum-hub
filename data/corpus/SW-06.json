@@ -1,0 +1,119 @@
+{
+  "documentId": "SW-06",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Simple Electrical Circuits (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W16",
+      "week": 16,
+      "topic": "Simple electrical circuits: Circuit components and circuit diagrams",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Electricity is used in everyday devices",
+        "Safe use of electrical equipment"
+      ],
+      "learningOutcomes": [
+        "Identify the symbols for a cell, battery, switch, lamp, resistor, ammeter and voltmeter",
+        "Build a simple series circuit and draw its circuit diagram",
+        "Explain why a circuit must be a complete loop for current to flow"
+      ],
+      "keyConcepts": [
+        "cell and battery",
+        "complete circuit",
+        "open and closed switch",
+        "conductors and insulators",
+        "circuit symbols",
+        "electric current is the flow of charge"
+      ],
+      "learningActivities": [
+        "Learners build a circuit with a cell, wires, a switch and a lamp and test the switch",
+        "Learners draw the circuit using standard symbols and a ruler",
+        "Learners test materials to classify them as conductors or insulators",
+        "Learners troubleshoot circuits with a hidden fault such as a loose wire or a broken lamp"
+      ],
+      "resources": [
+        "1.5 V cells and holders",
+        "Lamps (1.5 V), switches, wires, crocodile clips",
+        "Materials to test (metal, plastic, wood, graphite)",
+        "Circuit symbol chart"
+      ],
+      "assessment": "Draw a circuit diagram of a cell, switch and lamp in series and explain why the lamp does not light when the switch is open.",
+      "teacherNotes": "Use only low-voltage cells and never mains electricity. Learners often believe current flows from both ends of the cell and 'clashes' in the lamp, or that a lamp can light with a connection to only one terminal. Insist on a complete loop and straight, neat lines in diagrams."
+    },
+    {
+      "entryId": "W17",
+      "week": 17,
+      "topic": "Simple electrical circuits: Current and voltage in series circuits",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Circuit symbols and complete circuits",
+        "Current flows in a loop"
+      ],
+      "learningOutcomes": [
+        "State that current is the same at every point in a series circuit",
+        "Explain that the voltage of the supply is shared between components in a series circuit",
+        "Use an ammeter in series and a voltmeter in parallel correctly"
+      ],
+      "keyConcepts": [
+        "current measured in amperes (A) using an ammeter connected in series",
+        "voltage measured in volts (V) using a voltmeter connected across a component",
+        "current is the same everywhere in a series circuit",
+        "supply voltage is shared across components in series",
+        "adding cells in series increases voltage",
+        "adding lamps in series makes each lamp dimmer"
+      ],
+      "learningActivities": [
+        "Learners build series circuits with one, two and three lamps and compare brightness",
+        "Learners measure current at several positions in the circuit",
+        "Learners measure voltage across each lamp and across the cell",
+        "Learners record results in a table and describe patterns"
+      ],
+      "resources": [
+        "Cells, lamps, ammeters, voltmeters",
+        "Wires and switches",
+        "Results table template"
+      ],
+      "assessment": "Two identical lamps are connected in series to a 3.0 V battery. State the voltage across each lamp.",
+      "teacherNotes": "Learners think current is used up by the first lamp so the second is dimmer; show with ammeter readings that current is the same. Learners often connect ammeters in parallel and damage them, so check connections before switching on. Use identical lamps so that voltage is shared equally."
+    },
+    {
+      "entryId": "W18",
+      "week": 18,
+      "topic": "Simple electrical circuits: Parallel circuits and comparing circuits",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Series circuits",
+        "Use of ammeters and voltmeters"
+      ],
+      "learningOutcomes": [
+        "Describe how current divides and recombines at junctions in a parallel circuit",
+        "State that each branch of a parallel circuit has the same voltage as the supply",
+        "Compare series and parallel circuits and explain why homes use parallel wiring"
+      ],
+      "keyConcepts": [
+        "parallel circuit",
+        "branches and junctions",
+        "total current is the sum of branch currents",
+        "voltage across each branch equals supply voltage",
+        "one branch can fail without stopping others",
+        "comparison of series and parallel circuits"
+      ],
+      "learningActivities": [
+        "Learners build a circuit with two lamps in parallel and measure current in each branch and at the cell",
+        "Learners unscrew one lamp and observe the other",
+        "Learners measure voltage across each lamp",
+        "Learners complete a table comparing series and parallel circuits"
+      ],
+      "resources": [
+        "Cells, lamps, ammeters, voltmeters",
+        "Wires and switches",
+        "Comparison table template"
+      ],
+      "assessment": "Two identical lamps are connected in parallel to a 3.0 V battery and the current from the battery is 0.60 A. State the voltage across each lamp and the current in each branch.",
+      "teacherNotes": "Learners often think voltage is shared in parallel circuits as in series circuits. Show that each branch has the full supply voltage. Learners also think current is used up in the branch; show that currents add at the junction."
+    }
+  ]
+}

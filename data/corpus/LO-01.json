@@ -1,0 +1,160 @@
+{
+  "documentId": "LO-01",
+  "documentType": "learning_outcomes",
+  "title": "Grade 8 Integrated Science Learning Outcomes: Cells, Matter and Forces (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "outcomes": [
+    {
+      "outcomeId": "LO-CEL-01",
+      "topic": "Cells and organisation: Observing cells with a light microscope",
+      "statement": "Learners use a light microscope correctly to observe plant cells, calculate total magnification and produce an accurate labelled biological drawing.",
+      "successCriteria": [
+        "Names the eyepiece, objective lens, stage, light source and focus wheels and states the function of each",
+        "Focuses a slide on low power before switching to high power",
+        "Calculates total magnification by multiplying eyepiece and objective magnifications",
+        "Produces a drawing with a title, single clear lines, labels and magnification"
+      ],
+      "evidenceOfLearning": [
+        "Teacher observation checklist during the practical",
+        "Labelled biological drawing",
+        "Exit ticket with a magnification calculation"
+      ],
+      "commonMisconception": "Learners often add the lens magnifications instead of multiplying them and start focusing on high power."
+    },
+    {
+      "outcomeId": "LO-CEL-02",
+      "topic": "Cells and organisation: Plant and animal cell structures and functions",
+      "statement": "Learners identify the main structures of plant and animal cells and explain the function of each, including those found only in plant cells.",
+      "successCriteria": [
+        "Labels nucleus, cell membrane, cytoplasm, mitochondria, cell wall, chloroplasts and vacuole correctly",
+        "States the function of each structure",
+        "Lists structures found only in plant cells",
+        "Compares plant and animal cells in a table"
+      ],
+      "evidenceOfLearning": [
+        "Labelled cell diagrams",
+        "Completed comparison table",
+        "Short written explanations of structure functions"
+      ],
+      "commonMisconception": "Learners believe plant cells do not have mitochondria or that the cell wall controls what enters the cell."
+    },
+    {
+      "outcomeId": "LO-CEL-03",
+      "topic": "Cells and organisation: Specialised cells and levels of organisation",
+      "statement": "Learners explain how specialised cells are adapted to their functions and order cells, tissues, organs, organ systems and organisms by complexity.",
+      "successCriteria": [
+        "Defines specialised cell, tissue, organ and organ system with examples",
+        "Links at least one structural feature to the function of each of three specialised cells",
+        "Orders the levels of organisation correctly from cell to organism"
+      ],
+      "evidenceOfLearning": [
+        "Card sort of organisation levels",
+        "Zoom-in poster",
+        "Written explanation of a specialised cell"
+      ],
+      "commonMisconception": "Learners think all cells have a nucleus or that tissues and organs are the same thing."
+    },
+    {
+      "outcomeId": "LO-MAT-01",
+      "topic": "Matter and the particle model: States of matter and particle arrangement",
+      "statement": "Learners describe and draw the arrangement, spacing and movement of particles in solids, liquids and gases and use the model to explain their properties.",
+      "successCriteria": [
+        "Draws particle diagrams with correct spacing and arrangement for each state",
+        "Describes particle movement in each state using terms such as vibrate, slide and move randomly",
+        "Uses the model to explain shape, flow and compressibility"
+      ],
+      "evidenceOfLearning": [
+        "Particle diagrams",
+        "Property-sorting activity",
+        "Short explanations of compressibility"
+      ],
+      "commonMisconception": "Learners believe particles in solids do not move or that there is air between gas particles."
+    },
+    {
+      "outcomeId": "LO-MAT-02",
+      "topic": "Matter and the particle model: Changes of state and particle energy",
+      "statement": "Learners use the particle model to explain melting, freezing, evaporation, condensation and boiling and interpret a heating curve for water.",
+      "successCriteria": [
+        "Names each change of state and describes the particle behaviour involved",
+        "Identifies the melting and boiling plateaus on a heating curve",
+        "Explains why the temperature stays constant during a change of state",
+        "Distinguishes evaporation from boiling"
+      ],
+      "evidenceOfLearning": [
+        "Annotated heating curve",
+        "Practical recording table",
+        "Written explanation of the plateau"
+      ],
+      "commonMisconception": "Learners think temperature keeps rising during melting or that boiling and evaporation are the same process."
+    },
+    {
+      "outcomeId": "LO-MAT-03",
+      "topic": "Matter and the particle model: Diffusion and gas pressure",
+      "statement": "Learners explain diffusion and gas pressure using particle motion and describe how temperature affects the rate of diffusion.",
+      "successCriteria": [
+        "Defines diffusion as net movement from higher to lower concentration",
+        "Explains why diffusion is faster in hot water than in cold water",
+        "Explains gas pressure as collisions of particles with container walls"
+      ],
+      "evidenceOfLearning": [
+        "Food colouring investigation results",
+        "Particle-based explanations",
+        "Syringe pressure explanation"
+      ],
+      "commonMisconception": "Learners think diffusion requires stirring or that gas pressure is caused by particles colliding with each other."
+    },
+    {
+      "outcomeId": "LO-FOR-01",
+      "topic": "Forces and motion: Types of forces, newtons and weight",
+      "statement": "Learners classify forces as contact or non-contact, measure forces in newtons and calculate weight using W = m x g with g = 10 N/kg.",
+      "successCriteria": [
+        "Sorts forces into contact and non-contact with examples",
+        "Reads a newtonmeter correctly in newtons",
+        "Calculates weight from mass with correct units",
+        "States that mass does not change with location"
+      ],
+      "evidenceOfLearning": [
+        "Force card sort",
+        "Measurement table",
+        "Weight calculations"
+      ],
+      "commonMisconception": "Learners treat weight and mass as the same thing."
+    },
+    {
+      "outcomeId": "LO-FOR-02",
+      "topic": "Forces and motion: Balanced and unbalanced forces",
+      "statement": "Learners draw force diagrams, determine resultant force and explain how balanced and unbalanced forces affect motion.",
+      "successCriteria": [
+        "Draws force arrows with correct direction and relative size",
+        "Calculates the resultant of two forces in one dimension",
+        "Explains that balanced forces mean constant speed or rest",
+        "Explains that unbalanced forces change speed or direction"
+      ],
+      "evidenceOfLearning": [
+        "Force diagrams",
+        "Trolley investigation notes",
+        "Written explanations of motion"
+      ],
+      "commonMisconception": "Learners believe a force is required to keep an object moving at constant speed."
+    },
+    {
+      "outcomeId": "LO-FOR-03",
+      "topic": "Forces and motion: Speed, distance and time",
+      "statement": "Learners calculate speed from distance and time and interpret distance-time graphs.",
+      "successCriteria": [
+        "Calculates speed using speed = distance / time with correct units",
+        "Plots a distance-time graph from data",
+        "Identifies stationary and faster motion from graph shape",
+        "Converts between m/s and km/h"
+      ],
+      "evidenceOfLearning": [
+        "Speed calculations",
+        "Plotted graph",
+        "Graph matching activity"
+      ],
+      "commonMisconception": "Learners think a horizontal line on a distance-time graph means constant speed."
+    }
+  ]
+}

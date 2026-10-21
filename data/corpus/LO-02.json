@@ -1,0 +1,159 @@
+{
+  "documentId": "LO-02",
+  "documentType": "learning_outcomes",
+  "title": "Grade 8 Integrated Science Learning Outcomes: Ecosystems, Energy and Circuits (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "outcomes": [
+    {
+      "outcomeId": "LO-ECO-01",
+      "topic": "Ecosystems and interdependence: Habitats, populations and communities",
+      "statement": "Learners define habitat, population, community and ecosystem and classify environmental factors as biotic or abiotic.",
+      "successCriteria": [
+        "Defines each term accurately",
+        "Classifies example factors as biotic or abiotic",
+        "Calculates mean quadrat counts for two areas"
+      ],
+      "evidenceOfLearning": [
+        "Quadrat data table",
+        "Factor-sorting activity",
+        "Short definitions quiz"
+      ],
+      "commonMisconception": "Learners confuse habitat with ecosystem or think that abiotic factors do not affect living things."
+    },
+    {
+      "outcomeId": "LO-ECO-02",
+      "topic": "Ecosystems and interdependence: Food chains and food webs",
+      "statement": "Learners construct food chains and food webs with arrows showing energy transfer and identify producers, consumers and decomposers.",
+      "successCriteria": [
+        "Draws food chains with arrows from food to feeder",
+        "Labels producers, consumers and decomposers correctly",
+        "Predicts effects of removing an organism from a food web"
+      ],
+      "evidenceOfLearning": [
+        "Food web created with yarn or diagram",
+        "Labelled food chains",
+        "Prediction written responses"
+      ],
+      "commonMisconception": "Learners draw arrows from eater to food or believe the Sun is a producer."
+    },
+    {
+      "outcomeId": "LO-ECO-03",
+      "topic": "Ecosystems and interdependence: Interdependence and human impact",
+      "statement": "Learners explain interdependence using examples such as pollination and predator-prey relationships and describe human impacts on ecosystems.",
+      "successCriteria": [
+        "Explains a pollination example linking plants and animals",
+        "Describes how predator and prey populations affect each other",
+        "Describes at least two human impacts and a conservation action"
+      ],
+      "evidenceOfLearning": [
+        "Predator-prey graph",
+        "Case study analysis",
+        "Conservation action plan"
+      ],
+      "commonMisconception": "Learners think the loss of one species has no effect on other species."
+    },
+    {
+      "outcomeId": "LO-ENE-01",
+      "topic": "Energy transfer: Energy stores and transfers",
+      "statement": "Learners identify energy stores and transfers in everyday situations and state that energy is conserved.",
+      "successCriteria": [
+        "Names the energy stores at the start and end of a process",
+        "Describes transfers by electricity, force, heating or waves",
+        "States that total energy is conserved",
+        "Uses joules as the unit of energy"
+      ],
+      "evidenceOfLearning": [
+        "Energy transfer diagrams",
+        "Device matching activity",
+        "Written description of a torch"
+      ],
+      "commonMisconception": "Learners think energy is used up or created."
+    },
+    {
+      "outcomeId": "LO-ENE-02",
+      "topic": "Energy transfer: Conduction, convection and radiation",
+      "statement": "Learners describe conduction, convection and radiation and match each process to appropriate situations.",
+      "successCriteria": [
+        "Describes conduction as particle vibrations passing energy along solids",
+        "Explains convection using density change",
+        "Describes radiation as infrared waves that travel through a vacuum",
+        "Matches everyday examples to the correct process"
+      ],
+      "evidenceOfLearning": [
+        "Conduction practical results",
+        "Convection observation notes",
+        "Classification activity"
+      ],
+      "commonMisconception": "Learners think heat rises or that radiation needs air to travel."
+    },
+    {
+      "outcomeId": "LO-ENE-03",
+      "topic": "Energy transfer: Efficiency and wasted energy",
+      "statement": "Learners calculate efficiency and explain what happens to wasted energy and how waste can be reduced.",
+      "successCriteria": [
+        "Calculates efficiency as a percentage using useful output over total input",
+        "Explains that wasted energy spreads to the surroundings as thermal energy",
+        "Suggests ways to reduce energy waste",
+        "Draws a simple Sankey diagram"
+      ],
+      "evidenceOfLearning": [
+        "Efficiency calculations",
+        "Sankey diagrams",
+        "Insulation investigation results"
+      ],
+      "commonMisconception": "Learners think wasted energy is destroyed or that efficiency can exceed 100%."
+    },
+    {
+      "outcomeId": "LO-CIR-01",
+      "topic": "Simple electrical circuits: Circuit components and circuit diagrams",
+      "statement": "Learners identify circuit components and symbols, draw circuit diagrams and build a working series circuit.",
+      "successCriteria": [
+        "Identifies standard symbols for cell, battery, switch, lamp, resistor, ammeter and voltmeter",
+        "Draws a circuit diagram as a closed loop",
+        "Builds a working circuit and explains the effect of an open switch",
+        "Classifies materials as conductors or insulators"
+      ],
+      "evidenceOfLearning": [
+        "Circuit diagrams",
+        "Working circuit built by the learner",
+        "Conductor and insulator test results"
+      ],
+      "commonMisconception": "Learners think current flows from both terminals and clashes, or that one connection is enough to light a lamp."
+    },
+    {
+      "outcomeId": "LO-CIR-02",
+      "topic": "Simple electrical circuits: Current and voltage in series circuits",
+      "statement": "Learners explain current and voltage in series circuits and measure them with ammeters and voltmeters connected correctly.",
+      "successCriteria": [
+        "States that current is the same at all points in a series circuit",
+        "States that the supply voltage is shared between components in series",
+        "Connects an ammeter in series and a voltmeter in parallel across a component"
+      ],
+      "evidenceOfLearning": [
+        "Results table of current and voltage",
+        "Photograph or diagram of meter connections",
+        "Written conclusion"
+      ],
+      "commonMisconception": "Learners think current is used up as it passes through components."
+    },
+    {
+      "outcomeId": "LO-CIR-03",
+      "topic": "Simple electrical circuits: Parallel circuits and comparing circuits",
+      "statement": "Learners explain current and voltage in parallel circuits and compare them with series circuits.",
+      "successCriteria": [
+        "States that voltage across each parallel branch equals the supply voltage",
+        "States that total current is the sum of branch currents",
+        "Compares series and parallel circuits using a table",
+        "Explains why homes use parallel wiring"
+      ],
+      "evidenceOfLearning": [
+        "Series versus parallel comparison table",
+        "Measured currents and voltages",
+        "Written explanation of home wiring"
+      ],
+      "commonMisconception": "Learners think voltage is shared between parallel branches or that current is used up in branches."
+    }
+  ]
+}

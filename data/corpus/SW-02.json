@@ -1,0 +1,119 @@
+{
+  "documentId": "SW-02",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Integrated Science Scheme of Work: Matter and the Particle Model (Synthetic Mock Corpus)",
+  "subject": "Integrated Science",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W04",
+      "week": 4,
+      "topic": "Matter and the particle model: States of matter and particle arrangement",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Everyday examples of solids, liquids and gases",
+        "Matter takes up space and has mass"
+      ],
+      "learningOutcomes": [
+        "Describe the arrangement, spacing and movement of particles in solids, liquids and gases",
+        "Explain properties such as fixed shape, ability to flow and compressibility using the particle model",
+        "Draw particle diagrams for the three states of matter"
+      ],
+      "keyConcepts": [
+        "particles of matter are in constant motion",
+        "solid particles are closely packed in a regular pattern and vibrate about fixed positions",
+        "liquid particles are close together in an irregular arrangement and slide past each other",
+        "gas particles are far apart, move randomly at high speed and fill their container",
+        "forces of attraction between particles",
+        "compressibility"
+      ],
+      "learningActivities": [
+        "Learners act as particles in a marked area to model solid, liquid and gas behaviour",
+        "Learners compare compressing air and water in sealed syringes and explain the difference",
+        "Learners draw particle diagrams in circles of equal size for each state and annotate spacing and movement",
+        "Learners sort property statements (fixed shape, flows, compressible) under each state"
+      ],
+      "resources": [
+        "Sealed plastic syringes, water and air",
+        "Floor markers or masking tape",
+        "Particle diagram templates"
+      ],
+      "assessment": "Draw particle diagrams of a solid and a gas and use them to explain why a gas can be compressed but a solid cannot.",
+      "teacherNotes": "Learners often believe particles in a solid do not move; emphasise vibration. Many draw air or 'nothing but dots' between particles; make clear there is empty space (a vacuum) between particles. Learners may say that the particles themselves expand when heated; the particles stay the same size but move more vigorously."
+    },
+    {
+      "entryId": "W05",
+      "week": 5,
+      "topic": "Matter and the particle model: Changes of state and particle energy",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Particle arrangement in solids, liquids and gases",
+        "Reading a thermometer and recording data in a table"
+      ],
+      "learningOutcomes": [
+        "Use the particle model to explain melting, freezing, evaporation, condensation and boiling",
+        "Plot and interpret a heating curve for water showing flat sections at the melting and boiling points",
+        "Distinguish between evaporation and boiling"
+      ],
+      "keyConcepts": [
+        "melting and freezing at the melting point",
+        "evaporation occurs at the surface of a liquid at any temperature",
+        "boiling occurs throughout the liquid at the boiling point",
+        "condensation of gas to liquid",
+        "energy supplied during a change of state overcomes forces between particles",
+        "temperature is constant during a change of state"
+      ],
+      "learningActivities": [
+        "Learners heat crushed ice in a beaker over a hot-water bath, recording temperature every minute, and plot the heating curve",
+        "Learners annotate the flat sections of their graph with particle explanations",
+        "Learners observe condensation on the outside of a cold can and explain where the water came from",
+        "Learners compare drying times of wet cloth in sun and shade and relate to evaporation"
+      ],
+      "resources": [
+        "Crushed ice, beakers, thermometers, stopwatches",
+        "Hot-water bath or kettle (teacher supervised)",
+        "Cold drink can, cloth, graph paper"
+      ],
+      "assessment": "Explain why the temperature of melting ice stays at 0 degrees Celsius even though energy is still being supplied.",
+      "teacherNotes": "Learners often think the temperature keeps rising while ice melts; use the graph to show the plateau. Learners confuse melting with dissolving and boiling with evaporation. The boiling point of water depends on air pressure and is lower at high altitude. Supervise hot water at all times."
+    },
+    {
+      "entryId": "W06",
+      "week": 6,
+      "topic": "Matter and the particle model: Diffusion and gas pressure",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Particles in gases and liquids move constantly and randomly",
+        "Changes of state"
+      ],
+      "learningOutcomes": [
+        "Explain diffusion as the net movement of particles from a region of higher concentration to lower concentration",
+        "Describe how temperature affects the rate of diffusion",
+        "Explain gas pressure as the result of particles colliding with container walls"
+      ],
+      "keyConcepts": [
+        "diffusion",
+        "random particle motion",
+        "concentration difference",
+        "rate of diffusion increases with temperature",
+        "gas pressure caused by collisions of particles with walls",
+        "decreasing volume increases collision frequency and pressure"
+      ],
+      "learningActivities": [
+        "Learners time how long perfume or air freshener takes to be smelled at increasing distances across the room",
+        "Learners add a drop of food colouring to cold and hot water without stirring and compare spreading times",
+        "Learners push the plunger of a sealed syringe and describe the change in pressure using particles",
+        "Learners write a particle-based explanation for each observation"
+      ],
+      "resources": [
+        "Perfume or air freshener",
+        "Food colouring, beakers of cold and hot water",
+        "Sealed syringes",
+        "Stopwatches"
+      ],
+      "assessment": "Explain why a drop of food colouring spreads faster in hot water than in cold water.",
+      "teacherNotes": "Learners think stirring or currents cause diffusion; explain that particle motion alone causes it. Learners often say particles in a gas are pressed against walls by hitting each other; pressure is caused by collisions with the walls. Use only safe substances for diffusion demonstrations."
+    }
+  ]
+}
