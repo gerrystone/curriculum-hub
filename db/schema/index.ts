@@ -232,36 +232,3 @@ export const lessonPlanVersions = pgTable(
         ),
     ],
 );
-
-// 5. Learning outcomes
-export const learningOutcomes = pgTable(
-    "learning_outcomes",
-    {
-        id: uuid("id").defaultRandom().primaryKey(),
-
-        grade: varchar("grade", { length: 50 }).notNull(),
-
-        subject: varchar("subject", { length: 150 }).notNull(),
-
-        topic: varchar("topic", { length: 255 }).notNull(),
-
-        statement: text("statement").notNull(),
-
-        sourceDocumentId: varchar("source_document_id", {
-            length: 255,
-        }),
-
-        createdAt: timestamp("created_at", {
-            withTimezone: true,
-        })
-            .notNull()
-            .defaultNow(),
-    },
-    (table) => [
-        index("learning_outcomes_curriculum_idx").on(
-            table.grade,
-            table.subject,
-            table.topic,
-        ),
-    ],
-);
