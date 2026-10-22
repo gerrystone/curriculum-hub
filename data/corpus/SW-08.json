@@ -1,0 +1,151 @@
+{
+  "documentId": "SW-02",
+  "documentType": "scheme_of_work",
+  "title": "Grade 7 Mathematics Scheme of Work: Numbers, Fractions and Percentages (Synthetic Mock Corpus)",
+  "subject": "Mathematics",
+  "grade": 7,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W01",
+      "week": 1,
+      "topic": "Whole numbers, factors and multiples",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Counting and ordering whole numbers",
+        "Multiplication and division facts",
+        "Recognising odd and even numbers"
+      ],
+      "learningOutcomes": [
+        "Identify factors and multiples of given whole numbers",
+        "Determine common factors and common multiples of two whole numbers",
+        "Apply divisibility rules to identify factors of whole numbers"
+      ],
+      "keyConcepts": [
+        "A factor divides a number exactly",
+        "A multiple is obtained by multiplying a number by a whole number",
+        "Common factors and common multiples are shared by two or more numbers",
+        "Divisibility rules help determine whether a number is divisible by another number"
+      ],
+      "learningActivities": [
+        "Learners list factors of selected numbers using multiplication facts",
+        "The teacher demonstrates how to find common factors and common multiples",
+        "Learners work in pairs to investigate divisibility rules for 2, 3, 5 and 10",
+        "Learners solve short problems involving grouping objects into equal groups"
+      ],
+      "resources": [
+        "Number cards",
+        "Multiplication charts",
+        "Worksheets",
+        "Whiteboard and markers"
+      ],
+      "assessment": "List all factors of 24, identify the common factors of 18 and 24, and state whether 735 is divisible by 5.",
+      "teacherNotes": "Learners may confuse factors with multiples. Use arrays and equal-grouping activities to demonstrate the difference before introducing abstract exercises."
+    },
+    {
+      "entryId": "W02",
+      "week": 2,
+      "topic": "Fractions: Equivalent fractions and simplification",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Recognising fractions as parts of a whole",
+        "Identifying numerators and denominators",
+        "Finding factors of whole numbers"
+      ],
+      "learningOutcomes": [
+        "Identify equivalent fractions using diagrams and numerical examples",
+        "Generate equivalent fractions by multiplying or dividing the numerator and denominator by the same non-zero number",
+        "Simplify fractions to their lowest terms using common factors"
+      ],
+      "keyConcepts": [
+        "Equivalent fractions represent the same value",
+        "Multiplying or dividing the numerator and denominator by the same non-zero number preserves a fraction's value",
+        "Common factors can be used to simplify fractions"
+      ],
+      "learningActivities": [
+        "Learners use fraction strips and shaded diagrams to identify equivalent fractions",
+        "The teacher demonstrates generating equivalent fractions",
+        "Learners simplify fractions using common factors",
+        "Learners compare their solutions and explain their methods"
+      ],
+      "resources": [
+        "Fraction strips",
+        "Fraction diagrams",
+        "Worksheets",
+        "Whiteboard and markers"
+      ],
+      "assessment": "Write two fractions equivalent to 3/5 and simplify 18/24 to its lowest terms.",
+      "teacherNotes": "Learners may divide only the numerator or denominator when simplifying. Emphasise that both must be divided by the same non-zero factor."
+    },
+    {
+      "entryId": "W03",
+      "week": 3,
+      "topic": "Addition and subtraction of fractions",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Identifying equivalent fractions",
+        "Finding common multiples",
+        "Simplifying fractions"
+      ],
+      "learningOutcomes": [
+        "Add and subtract fractions with the same denominator",
+        "Add fractions with different denominators by finding a common denominator",
+        "Solve everyday problems involving addition and subtraction of fractions"
+      ],
+      "keyConcepts": [
+        "Fractions with different denominators must be expressed using a common denominator before addition or subtraction",
+        "Equivalent fractions can be used to obtain a common denominator",
+        "Answers should be simplified where possible"
+      ],
+      "learningActivities": [
+        "The teacher models fraction addition using visual representations",
+        "Learners convert fractions to equivalent fractions with common denominators",
+        "Groups solve word problems involving measurements and sharing quantities",
+        "Learners check their answers and explain their calculations"
+      ],
+      "resources": [
+        "Fraction diagrams",
+        "Measurement containers",
+        "Practice worksheets",
+        "Exercise books"
+      ],
+      "assessment": "Calculate 2/5 + 1/3 and 7/8 - 1/4, showing the working and simplifying the answers.",
+      "teacherNotes": "Learners may add or subtract denominators directly. Reinforce that the denominator describes the size of the parts and must remain common when combining fractions."
+    },
+    {
+      "entryId": "W04",
+      "week": 4,
+      "topic": "Decimals, fractions and percentages",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Place value in whole numbers and decimal numbers",
+        "Understanding fractions as parts of a whole",
+        "Multiplication and division by 10 and 100"
+      ],
+      "learningOutcomes": [
+        "Convert simple fractions into decimals using division",
+        "Express decimals as percentages by multiplying by 100",
+        "Convert common percentages into equivalent fractions and decimals"
+      ],
+      "keyConcepts": [
+        "A percentage represents a quantity out of 100",
+        "Fractions, decimals and percentages can represent the same value",
+        "Equivalent representations can be used to compare quantities"
+      ],
+      "learningActivities": [
+        "Learners match fraction, decimal and percentage cards representing equivalent values",
+        "The teacher demonstrates conversions using place-value charts",
+        "Learners convert common fractions such as 1/2, 1/4 and 3/4",
+        "Learners complete a conversion table and explain the relationships between representations"
+      ],
+      "resources": [
+        "Fraction, decimal and percentage cards",
+        "Place-value charts",
+        "Worksheets",
+        "Whiteboard and markers"
+      ],
+      "assessment": "Convert 3/4 into a decimal and a percentage. Express 0.2 as a percentage and as a fraction in its simplest form.",
+      "teacherNotes": "Some learners may confuse multiplying by 100 with dividing by 100. Use familiar benchmark percentages and visual models to reinforce the relationship."
+    }
+  ]
+}

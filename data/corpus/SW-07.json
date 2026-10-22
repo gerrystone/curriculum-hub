@@ -1,0 +1,150 @@
+{
+  "documentId": "SW-02",
+  "documentType": "scheme_of_work",
+  "title": "Grade 8 Mathematics Scheme of Work: Fractions, Decimals and Percentages (Synthetic Mock Corpus)",
+  "subject": "Mathematics",
+  "grade": 8,
+  "version": 1,
+  "entries": [
+    {
+      "entryId": "W01",
+      "week": 1,
+      "topic": "Fractions: Equivalent fractions and simplifying fractions",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Recognising fractions as parts of a whole",
+        "Identifying numerators and denominators",
+        "Understanding multiplication and division of whole numbers"
+      ],
+      "learningOutcomes": [
+        "Identify equivalent fractions using diagrams and numerical examples",
+        "Generate equivalent fractions by multiplying or dividing the numerator and denominator by the same non-zero number",
+        "Simplify fractions to their lowest terms using common factors"
+      ],
+      "keyConcepts": [
+        "Equivalent fractions represent the same value",
+        "Multiplying or dividing the numerator and denominator by the same non-zero number preserves a fraction's value",
+        "The highest common factor can be used to simplify a fraction"
+      ],
+      "learningActivities": [
+        "Learners use fraction strips or shaded diagrams to compare equivalent fractions",
+        "The teacher demonstrates how to generate equivalent fractions using multiplication and division",
+        "Learners work in pairs to simplify fractions using common factors",
+        "Learners solve individual exercises and explain their reasoning"
+      ],
+      "resources": [
+        "Fraction strips",
+        "Fraction diagrams and worksheets",
+        "Whiteboard and markers",
+        "Exercise books and pencils"
+      ],
+      "assessment": "Exit ticket: Write two fractions equivalent to 3/4 and simplify 18/24 to its lowest terms.",
+      "teacherNotes": "Some learners may divide only the numerator or denominator when simplifying. Emphasise that both must be divided by the same non-zero factor. Use visual representations before moving to abstract calculations."
+    },
+    {
+      "entryId": "W02",
+      "week": 2,
+      "topic": "Fractions: Addition and subtraction of fractions",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Identifying equivalent fractions",
+        "Finding common multiples",
+        "Simplifying fractions"
+      ],
+      "learningOutcomes": [
+        "Add fractions with the same denominator and express the answer in its simplest form",
+        "Add fractions with different denominators by finding a common denominator",
+        "Subtract fractions with different denominators and check whether the result can be simplified"
+      ],
+      "keyConcepts": [
+        "Fractions must have a common denominator before their numerators can be added or subtracted",
+        "The least common multiple can help identify a common denominator",
+        "Answers should be simplified where possible"
+      ],
+      "learningActivities": [
+        "The teacher models addition and subtraction using fraction diagrams",
+        "Learners convert fractions to equivalent fractions with a common denominator",
+        "Small groups solve contextual problems involving sharing food and measuring quantities",
+        "Learners exchange solutions and check each other's calculations"
+      ],
+      "resources": [
+        "Fraction diagrams",
+        "Worked examples",
+        "Practice worksheets",
+        "Whiteboard and markers"
+      ],
+      "assessment": "Learners calculate 2/5 + 1/3 and 7/8 - 1/4, showing their working and simplifying their answers.",
+      "teacherNotes": "Learners may incorrectly add denominators. Reinforce the meaning of a common denominator using visual models and ask learners to estimate whether an answer is reasonable."
+    },
+    {
+      "entryId": "W03",
+      "week": 3,
+      "topic": "Decimals and percentages: Converting between representations",
+      "durationMinutes": 80,
+      "priorKnowledge": [
+        "Place value in decimal numbers",
+        "Understanding fractions as parts of a whole",
+        "Multiplication and division by 10 and 100"
+      ],
+      "learningOutcomes": [
+        "Convert simple fractions into decimals using division",
+        "Convert decimals into percentages by multiplying by 100",
+        "Express common percentages as fractions and decimals"
+      ],
+      "keyConcepts": [
+        "A percentage expresses a quantity out of 100",
+        "Fractions, decimals and percentages can represent the same value",
+        "Equivalent representations can simplify comparisons"
+      ],
+      "learningActivities": [
+        "Learners match fraction, decimal and percentage cards representing equivalent values",
+        "The teacher demonstrates conversions using place-value charts",
+        "Learners calculate percentages from everyday examples such as test scores and classroom surveys",
+        "Learners create a conversion table and explain the relationships between representations"
+      ],
+      "resources": [
+        "Fraction, decimal and percentage cards",
+        "Place-value charts",
+        "Worksheets",
+        "Calculator for checking answers"
+      ],
+      "assessment": "Convert 3/4 to a decimal and percentage, then express 0.2 as a percentage and a fraction in simplest form.",
+      "teacherNotes": "Some learners may multiply by 100 when converting a percentage to a decimal rather than divide by 100. Reinforce the meaning of percent and use benchmark values such as 25%, 50% and 75%."
+    },
+    {
+      "entryId": "W04",
+      "week": 4,
+      "topic": "Percentages: Finding percentages of quantities",
+      "durationMinutes": 60,
+      "priorKnowledge": [
+        "Converting between fractions, decimals and percentages",
+        "Multiplication and division of whole numbers",
+        "Interpreting simple word problems"
+      ],
+      "learningOutcomes": [
+        "Calculate a given percentage of a whole-number quantity",
+        "Solve everyday problems involving discounts and percentage increases",
+        "Explain the calculation used to determine a percentage of a quantity"
+      ],
+      "keyConcepts": [
+        "A percentage of a quantity can be calculated by converting the percentage to a fraction or decimal",
+        "Discounts reduce an original price",
+        "Percentage increases add a proportion of the original quantity"
+      ],
+      "learningActivities": [
+        "The teacher demonstrates calculating 10%, 25% and 50% of quantities",
+        "Learners calculate sale prices using mock shop price tags",
+        "Pairs solve word problems involving discounts and increases",
+        "Learners explain their methods and compare alternative strategies"
+      ],
+      "resources": [
+        "Mock price tags",
+        "Shopping scenario worksheets",
+        "Whiteboard and markers",
+        "Exercise books"
+      ],
+      "assessment": "A school bag costs KSh 2,000 and is discounted by 15%. Calculate the discount and the final price, showing the method used.",
+      "teacherNotes": "Learners may calculate the percentage correctly but forget to subtract the discount from the original price. Ask them to distinguish between the discount amount and the final selling price."
+    }
+  ]
+}
