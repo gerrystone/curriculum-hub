@@ -25,6 +25,10 @@ export const corpusDocuments = pgTable(
     {
         documentId: uuid("document_id").primaryKey().defaultRandom(),
 
+        sourceId: text("source_id")
+            .notNull()
+            .unique(),
+
         documentType: corpusDocumentTypeEnum("document_type")
             .notNull(),
 

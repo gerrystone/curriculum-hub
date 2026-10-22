@@ -1,6 +1,3 @@
-
-import "server-only";
-
 import { createHash } from "node:crypto";
 
 export const EMBEDDING_DIMENSIONS = 1536;
