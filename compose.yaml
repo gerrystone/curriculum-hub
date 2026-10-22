@@ -6,9 +6,9 @@ services:
     environment:
       POSTGRES_DB: curriculum_hub
       POSTGRES_USER: curriculum_user
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_PASSWORD: Cur2026.
     ports:
-      - "5432:5432"
+      - "54329:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
