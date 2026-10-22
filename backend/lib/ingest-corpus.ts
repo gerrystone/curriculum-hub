@@ -1,6 +1,6 @@
 
 import type {
-    ExistingChunkEmbeddingState,
+    ExistingChunkEmbeddingState, ExtractedLearningOutcome,
     GeneratedEmbedding,
     IngestionReport,
     PreparedDocument,
@@ -12,15 +12,17 @@ import {
     corpusDocuments,
     corpusEmbeddings,
 } from "@/db/schema/corpus";
-import { and, eq, inArray, notInArray } from "drizzle-orm";
+import {and, eq, inArray, notInArray, sql, type SQL} from "drizzle-orm";
 import {
     EMBEDDING_DIMENSIONS,
     embeddingProvider,
 } from "@/backend/lib/ai/embeddings";
 import path from "node:path";
 import { readdir, readFile } from "node:fs/promises";
-import { corpusDocumentSchema } from "@/backend/lib/corpus-validation";
+import {CorpusDocument, corpusDocumentSchema} from "@/backend/lib/corpus-validation";
 import { prepareDocumentForIngestion } from "@/backend/lib/chunking";
+import {hashContent} from "@/backend/lib/corpus-hash";
+import {learningOutcomes} from "@/db/schema/learning_outcomes";
 
 const EMBEDDING_BATCH_SIZE = 50;
 
@@ -40,13 +42,20 @@ function splitIntoBatches<T>(
 
     return batches;
 }
+function extractLearningOutcomes(document: CorpusDocument): ExtractedLearningOutcome[] {
+    if (document.documentType !== "scheme_of_work") {
+        return [];
+    }
 
-/**
- * Resolve the database-generated UUID using the stable filename ID.
- * The JSON document does not need a documentId.
- *
- * Requires corpusDocuments.sourceId to be unique.
- */
+    return document.entries.flatMap((entry) =>
+        entry.learningOutcomes.map((outcome, index) => ({
+            sourceEntryId: entry.entryId,
+            outcomeIndex: index,
+            outcomeText: outcome,
+            contentHash: hashContent(outcome),
+        })),
+    );
+}
 async function getOrCreateDocumentId(
     preparedDocument: PreparedDocument,
     sourceId: string,
@@ -90,9 +99,6 @@ async function getOrCreateDocumentId(
     return savedDocument.id;
 }
 
-/**
- * Read existing chunk and embedding hashes for the active model.
- */
 async function getExistingChunkEmbeddingState(
     documentId: string,
 ): Promise<Map<string, ExistingChunkEmbeddingState>> {
@@ -123,9 +129,6 @@ async function getExistingChunkEmbeddingState(
     );
 }
 
-/**
- * Only generate embeddings for missing or changed chunks.
- */
 async function generateMissingOrStaleEmbeddings(
     preparedDocument: PreparedDocument,
     existingState: Map<string, ExistingChunkEmbeddingState>,
@@ -176,13 +179,7 @@ async function generateMissingOrStaleEmbeddings(
     return generated;
 }
 
-/**
- * Upsert chunks against the already-resolved document UUID.
- * Do not create another document inside this function.
- *
- * Requires a unique constraint on
- * (documentId, sourceEntryId) for corpusChunks.
- */
+
 async function upsertDocumentChunksAndEmbeddings(
     preparedDocument: PreparedDocument,
     documentId: string,
@@ -191,7 +188,6 @@ async function upsertDocumentChunksAndEmbeddings(
     const { chunks } = preparedDocument;
 
     await db.transaction(async (tx) => {
-        // Create or update chunks without changing their existing IDs.
         for (const chunk of chunks) {
             await tx
                 .insert(corpusChunks)
@@ -221,7 +217,6 @@ async function upsertDocumentChunksAndEmbeddings(
                 });
         }
 
-        // Remove chunks that are no longer present in the source.
         const obsoleteChunks = chunks.length === 0
             ? await tx
                 .select({ id: corpusChunks.id })
@@ -244,7 +239,6 @@ async function upsertDocumentChunksAndEmbeddings(
             (chunk) => chunk.id,
         );
 
-        // Explicitly remove associated embeddings before deleting chunks.
         if (obsoleteChunkIds.length > 0) {
             await tx
                 .delete(corpusEmbeddings)
@@ -276,7 +270,6 @@ async function upsertDocumentChunksAndEmbeddings(
             ]),
         );
 
-        // Insert or update vectors only for chunks that needed new ones.
         for (const [sourceEntryId, generated] of generatedEmbeddings) {
             const chunkId = chunkIdBySourceEntryId.get(sourceEntryId);
 
@@ -310,6 +303,83 @@ async function upsertDocumentChunksAndEmbeddings(
     });
 }
 
+async function upsertLearningOutcomes(documentId: string, outcomes: ExtractedLearningOutcome[],): Promise<void> {
+    await db.transaction(async (tx) => {
+        if (outcomes.length > 0) {
+            await tx
+                .insert(learningOutcomes)
+                .values(
+                    outcomes.map((outcome) => ({
+                        documentId,
+                        sourceEntryId: outcome.sourceEntryId,
+                        outcomeIndex: outcome.outcomeIndex,
+                        outcomeText: outcome.outcomeText,
+                        contentHash: outcome.contentHash,
+                    })),
+                )
+                .onConflictDoUpdate({
+                    target: [
+                        learningOutcomes.documentId,
+                        learningOutcomes.sourceEntryId,
+                        learningOutcomes.outcomeIndex,
+                    ],
+                    set: {
+                        outcomeText:
+                            sql`excluded.outcome_text`,
+                        contentHash:
+                            sql`excluded.content_hash`,
+                    },
+                });
+        }
+
+        // Remove outcomes that no longer exist in the source.
+        const current = await tx
+            .select({
+                sourceEntryId:
+                learningOutcomes.sourceEntryId,
+                outcomeIndex:
+                learningOutcomes.outcomeIndex,
+            })
+            .from(learningOutcomes)
+            .where(
+                eq(learningOutcomes.documentId, documentId),
+            );
+
+        const currentKeys = new Set(
+            outcomes.map(
+                (o) => `${o.sourceEntryId}:${o.outcomeIndex}`,
+            ),
+        );
+
+        const obsolete = current.filter(
+            (o) =>
+                !currentKeys.has(
+                    `${o.sourceEntryId}:${o.outcomeIndex}`,
+                ),
+        );
+
+        for (const outcome of obsolete) {
+            await tx
+                .delete(learningOutcomes)
+                .where(
+                    and(
+                        eq(
+                            learningOutcomes.documentId,
+                            documentId,
+                        ),
+                        eq(
+                            learningOutcomes.sourceEntryId,
+                            outcome.sourceEntryId,
+                        ),
+                        eq(
+                            learningOutcomes.outcomeIndex,
+                            outcome.outcomeIndex,
+                        ),
+                    ),
+                );
+        }
+    });
+}
 export async function ingestCorpusDirectory(
     corpusDirectory = path.join(
         process.cwd(),
@@ -377,6 +447,9 @@ export async function ingestCorpusDirectory(
                 generatedEmbeddings,
             );
 
+            const outcomes = extractLearningOutcomes(preparedDocument.document)
+
+            await upsertLearningOutcomes(documentId, outcomes)
             report.documentsProcessed += 1;
             report.chunksProcessed += preparedDocument.chunks.length;
             report.embeddingsGenerated += generatedEmbeddings.size;

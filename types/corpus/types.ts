@@ -42,3 +42,10 @@ export type IngestionReport = {
         error: string;
     }>;
 };
+
+export type ExtractedLearningOutcome = {
+    sourceEntryId: string;
+    outcomeIndex: number;
+    outcomeText: string;
+    contentHash: string;
+};
