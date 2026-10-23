@@ -1,4 +1,6 @@
+"use client"
 import {Button} from "@/app/components/Button";
+import {useRouter} from "next/navigation";
 
 type Status = "Published" | "Draft";
 
@@ -46,10 +48,11 @@ const formatDate = (iso: string) =>
     });
 
 export default function TeacherLessonPlansList() {
+    const router = useRouter();
     return (
         <div className={"space-y-4"}>
             <div className={"flex justify-end"}>
-                <Button className={"w-fit"}> + Create Lesson Plan</Button>
+                <Button className={"w-fit"} onClick={()=>router.push("/teacher/create-lesson-plan")}> + Create Lesson Plan</Button>
             </div>
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm ">
 
