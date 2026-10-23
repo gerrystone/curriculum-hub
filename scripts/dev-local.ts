@@ -1,6 +1,8 @@
 
 import "dotenv/config";
 import { spawn } from "node:child_process";
+import { copyFile, access } from "node:fs/promises";
+import { constants } from "node:fs";
 
 type CommandResult = {
     command: string;
@@ -33,7 +35,20 @@ function runCommand({ command, args }: CommandResult): Promise<void> {
     });
 }
 
+async function ensureLocalEnv(): Promise<void> {
+    try {
+        await access(".env.local", constants.F_OK);
+        console.log(".env.local already exists.");
+    } catch {
+        console.log("Creating .env.local from .env.example...");
+
+        await copyFile(".env.example", ".env.local");
+    }
+}
+
 async function main(): Promise<void> {
+    await  ensureLocalEnv();
+
     console.log("\nStarting Docker Compose services...");
 
     await runCommand({
