@@ -1,4 +1,5 @@
 import {LessonPlan} from "@/backend/lib/validation/lesson-plan-validation";
+import {LessonPlanStatus} from "@/features/lessons/hooks/useCurriculum";
 
 export type LessonPlanSource = {
     chunkId: string;
@@ -16,5 +17,7 @@ export type LessonPlanGenerationSuccess = {
 };
 export  type GeneratedLessonPlanProps = {
     data: LessonPlanGenerationSuccess["data"];
-    clearPlan: () => void;
+    clearPlan?: () => void;
+    viewType: "edit" | "create",
+    status?: LessonPlanStatus;
 };

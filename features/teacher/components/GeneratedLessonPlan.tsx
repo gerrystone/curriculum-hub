@@ -10,8 +10,9 @@ import {useSaveLessonPlan} from "@/features/lessons/hooks/useCurriculum";
 import {toast} from "react-toastify";
 import {Button} from "@/app/components/Button";
 
-export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonPlanProps) {
+export default function GeneratedLessonPlan({data, clearPlan, viewType, status}: GeneratedLessonPlanProps) {
     const [plan, setPlan] = useState<LessonPlan>(data.plan);
+
     function updatePlan<K extends keyof LessonPlan>(
         key: K,
         value: LessonPlan[K],
@@ -86,9 +87,17 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
         saveLessonPlanMutation.mutate(payload, {
             onSuccess:()=>{
                 toast.success("Lesson plan saved successfully")
-                clearPlan()
+                clearPlan?.()
             }
         })
+    }
+
+    const handleApproveLessonPlan = ()=>{
+
+    }
+
+    const handleRejectLessonPlan = ()=>{
+
     }
     return (
         <div className="mx-auto max-w-5xl space-y-6 pb-10">
@@ -111,6 +120,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 <h2 className="font-semibold text-gray-900">Lesson details</h2>
 
                 <TextAreaField
+                    disabled={viewType==="edit"}
                     label="Title"
                     value={plan.title}
                     onChange={(value) => updatePlan("title", value)}
@@ -118,6 +128,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
 
                 <TextAreaField
                     label="Grade"
+                    disabled={viewType==="edit"}
                     value={String(plan.grade)}
                     onChange={(value) =>
                         updatePlan("grade", Number(value))
@@ -126,12 +137,14 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
 
                 <TextAreaField
                     label="Subject"
+                    disabled={viewType==="edit"}
                     value={plan.subject}
                     onChange={(value) => updatePlan("subject", value)}
                 />
 
                 <TextAreaField
                     label="Duration (minutes)"
+                    disabled={viewType==="edit"}
                     value={String(plan.durationMinutes)}
                     onChange={(value) =>
                         updatePlan("durationMinutes", Number(value))
@@ -140,6 +153,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
 
                 <TextAreaField
                     label="Learning outcome"
+                    disabled={viewType==="edit"}
                     value={"oo"}
                     onChange={(value) =>
                         setPlan((current) => ({
@@ -156,6 +170,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
 
                 <ListTextAreaField
                     label="Objectives"
+                    disabled={viewType==="edit"}
                     items={plan.objectives}
                     onChange={(objectives) =>
                         updatePlan("objectives", objectives)
@@ -163,6 +178,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 />
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Materials"
                     items={plan.materials}
                     onChange={(materials) =>
@@ -175,6 +191,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 <h2 className="font-semibold text-gray-900">1. Lesson starter</h2>
 
                 <TextAreaField
+                    disabled={viewType==="edit"}
                     label="Duration (minutes)"
                     value={String(plan.starter.durationMinutes)}
                     onChange={(value) =>
@@ -183,6 +200,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 />
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Teacher actions"
                     items={plan.starter.teacherActions}
                     onChange={(teacherActions) =>
@@ -191,6 +209,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 />
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Learner actions"
                     items={plan.starter.learnerActions}
                     onChange={(learnerActions) =>
@@ -209,6 +228,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                         </h3>
 
                         <TextAreaField
+                            disabled={viewType==="edit"}
                             label="Activity title"
                             value={activity.title}
                             onChange={(title) =>
@@ -217,6 +237,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                         />
 
                         <TextAreaField
+                            disabled={viewType==="edit"}
                             label="Duration (minutes)"
                             value={String(activity.durationMinutes)}
                             onChange={(value) =>
@@ -227,6 +248,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                         />
 
                         <ListTextAreaField
+                            disabled={viewType==="edit"}
                             label="Teacher actions"
                             items={activity.teacherActions}
                             onChange={(teacherActions) =>
@@ -235,6 +257,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                         />
 
                         <ListTextAreaField
+                            disabled={viewType==="edit"}
                             label="Learner actions"
                             items={activity.learnerActions}
                             onChange={(learnerActions) =>
@@ -283,6 +306,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 </h2>
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Questions"
                     items={plan.checkForUnderstanding.questions}
                     onChange={(questions) =>
@@ -295,6 +319,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 <h2 className="font-semibold text-gray-900">4. Conclusion</h2>
 
                 <TextAreaField
+                    disabled={viewType==="edit"}
                     label="Duration (minutes)"
                     value={String(plan.conclusion.durationMinutes)}
                     onChange={(value) =>
@@ -303,6 +328,7 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                 />
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Teacher actions"
                     items={plan.conclusion.teacherActions}
                     onChange={(teacherActions) =>
@@ -310,25 +336,20 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
                     }
                 />
 
-               {/* <ListTextAreaField
-                    label="Learner actions"
-                    items={plan.conclusion.learnerActions}
-                    onChange={(learnerActions) =>
-                        updateConclusion({ learnerActions })
-                    }
-                />*/}
             </section>
 
             <section className="space-y-5 rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
                 <h2 className="font-semibold text-gray-900">5. Assessment</h2>
 
                 <TextAreaField
+                    disabled={viewType==="edit"}
                     label="Assessment method"
                     value={plan.assessment.method}
                     onChange={(method) => updateAssessment({ method })}
                 />
 
                 <ListTextAreaField
+                    disabled={viewType==="edit"}
                     label="Success criteria"
                     items={plan.assessment.successCriteria}
                     onChange={(successCriteria) =>
@@ -362,19 +383,46 @@ export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonP
             </section>
 
             <div className="flex flex-wrap justify-end gap-3">
-                <button
-                    type="button"
-                    onClick={() => setPlan(data.plan)}
-                    className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                >
-                    Reset changes
-                </button>
+                {
+                    viewType === "create" ? (
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => setPlan(data.plan)}
+                                className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                            >
+                                Reset changes
+                            </button>
 
-               <Button onClick={handleSaveLessonPlan}  disabled={saveLessonPlanMutation.isPending}>
-                   {
-                       saveLessonPlanMutation.isPending ? "Saving..." : "Save Lesson Plan"
-                   }
-               </Button>
+                            <Button
+                                onClick={handleSaveLessonPlan}
+                                disabled={saveLessonPlanMutation.isPending}
+                            >
+                                {saveLessonPlanMutation.isPending
+                                    ? "Saving..."
+                                    : "Save Lesson Plan"}
+                            </Button>
+                        </>
+                    ) : (
+                        <>
+                            {status === "draft" || status === "submitted" ? (
+                                <>
+                                    <button
+                                        className="bg-red-500 text-white rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                                        onClick={handleRejectLessonPlan}
+                                    >
+                                        Reject
+                                    </button>
+                                    <Button onClick={handleApproveLessonPlan}>
+                                        Approve
+                                    </Button>
+
+
+                                </>
+                            ) : null}
+                        </>
+                    )
+                }
             </div>
         </div>
     );

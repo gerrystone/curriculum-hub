@@ -1,12 +1,11 @@
 "use client"
 import {Button} from "@/app/components/Button";
 import {useRouter} from "next/navigation";
-import {useLessonPlans} from "@/features/lessons/hooks/useCurriculum";
-
-type Status = "draft" | "submitted" | "approved" | "rejected";
+import {LessonPlanStatus, useLessonPlans} from "@/features/lessons/hooks/useCurriculum";
 
 
-const statusStyles: Record<Status, string> = {
+
+const statusStyles: Record<LessonPlanStatus, string> = {
     approved: "bg-emerald-50 text-emerald-700 ring-emerald-600/20",
     draft: "bg-red-50 text-red-800 ring-red-600/20",
     rejected: "bg-red-50 text-red-800 ring-red-600/20",
@@ -46,7 +45,7 @@ export default function CurriculumLeadLessonPlanList() {
                                 {
                                     plansList.length > 0   ? <>
                                         {plansList.map((plan) => (
-                                            <tr key={plan.id} className="transition-colors hover:bg-slate-50" >
+                                            <tr key={plan.id} className="transition-colors hover:bg-slate-50 cursor-pointer" onClick={()=>router.push(`/lead/lesson-plan/${plan.id}`)}>
                                                 <th
                                                     scope="row"
                                                     className="whitespace-nowrap px-4 py-3 font-medium text-slate-900"

@@ -200,7 +200,7 @@ export default function GenerateLessonPlan() {
             <div>
                 {
                     lessonPlan && (
-                        <GeneratedLessonPlan data={lessonPlan} clearPlan={clearPlan} />
+                        <GeneratedLessonPlan data={lessonPlan} clearPlan={clearPlan} viewType={"create"} />
                     )
                 }
             </div>

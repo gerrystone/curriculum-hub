@@ -27,22 +27,27 @@ export type GenerateLessonPlanRequest = {
     durationMinutes: number;
 };
 
+export type LessonPlanStatus = | "draft" | "submitted" | "approved" | "rejected";
 export type LessonPlanListItem = {
     id: string;
     title: string;
     grade: string;
     subject: string;
     topic: string;
-    status: "draft" | "submitted" | "approved" | "rejected";
+    status:LessonPlanStatus
     currentVersion: number;
     createdBy: string;
     createdAt: Date;
     updatedAt: Date;
-    content: LessonPlan | null;
+    content: LessonPlanGenerationSuccess["data"] | null;
 };
 
 export  type  LessonPlanListResponse = {
     data: LessonPlanListItem[];
+}
+
+export type LessonPlanDetailsResponse = {
+    data: LessonPlanListItem;
 }
 export const useCurriculum = (grade:string, subject: string) => {
     return useQuery<LearningOutcomesResponse>({
@@ -94,5 +99,18 @@ export const useLessonPlans = ()=>{
             );
             return response.data;
         }
+    })
+}
+
+export const useLessonPlanDetails = (planId: string)=>{
+    return useQuery<LessonPlanDetailsResponse>({
+        queryKey:["lesson-plan-details", planId],
+        queryFn:async()=>{
+            const response = await apiClient.get(
+                `/lesson-plans/${planId}`,
+            );
+            return response.data;
+        },
+        enabled:!!planId,
     })
 }

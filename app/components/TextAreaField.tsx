@@ -5,8 +5,9 @@ type TextareaFieldProps = {
     onChange: (value: string) => void;
     rows?: number;
     hint?: string;
+    disabled?: boolean;
 };
-export default function TextAreaField({label, value, onChange, rows = 2, hint,}: TextareaFieldProps) {
+export default function TextAreaField({label, value, onChange, rows = 2, hint,disabled}: TextareaFieldProps) {
     return (
         <div className="space-y-2">
             <label className="block text-sm font-medium text-gray-700">
@@ -14,6 +15,7 @@ export default function TextAreaField({label, value, onChange, rows = 2, hint,}:
             </label>
 
             <textarea
+                disabled={disabled}
                 value={value}
                 rows={rows}
                 onChange={(event) => onChange(event.target.value)}
