@@ -7,8 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "db:ingestion": "tsx scripts/ingest-corpus.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "db:seed:users": "tsx scripts/seed-users.ts",
     "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts",
+    "db:seed": "npm run db:seed:users && npm run db:seed:teacher-curriculum-leads",
+    "dev:local": "tsx scripts/dev-local.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
