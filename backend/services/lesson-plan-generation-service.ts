@@ -27,34 +27,27 @@ type LessonPlanError = {
     message: string;
 
 };
-export type LessonPlanGenerationResult =
-    | {
-    success: true;
-    data: {
-        plan: LessonPlan;
-        groundingStatus: "grounded";
-        sources: Array<{
-            chunkId: string;
-            documentTitle: string;
-            sourceEntryId: string;
-            topic: string;
-        }>;
-    };
-}
-    | {
-    success: false;
-    error: LessonPlanError;
+export type LessonPlanGenerationResult = {
+    plan: LessonPlan;
+    groundingStatus: "grounded";
+    sources: {
+        chunkId: string;
+        documentTitle: string;
+        sourceEntryId: string;
+        topic: string;
+    }[];
 };
+
+export  type LessonGenerationResponse = {
+    data: LessonPlanGenerationResult;
+}
 const MAX_ATTEMPTS = 2;
 
 export async function generateLessonPlan(outcomeId: string, durationMinutes: number,): Promise<LessonPlanGenerationResult> {
     const retrieval = await retrieveLessonPlanContext(outcomeId);
 
     if (!retrieval.success) {
-        return {
-            success: false,
-            error: retrieval.error,
-        };
+        throw new Error(retrieval.error.message);
     }
 
     const { context, chunks } = retrieval;
@@ -68,13 +61,7 @@ export async function generateLessonPlan(outcomeId: string, durationMinutes: num
         });
 
         if (!generation.success) {
-            return {
-                success: false,
-                error: {
-                    code: "GENERATION_PROVIDER_ERROR",
-                    message: generation.message,
-                },
-            };
+            throw new Error(generation.message);
         }
 
         const validation = validateLessonPlan(
@@ -119,23 +106,16 @@ export async function generateLessonPlan(outcomeId: string, durationMinutes: num
         }
 
         return {
-            success: true,
-            data: {
-                plan,
-                groundingStatus: "grounded",
-                sources,
-            },
+            plan,
+            groundingStatus: "grounded",
+            sources,
         };
     }
-
-    return {
-        success: false,
-        error: {
-            code: "VALIDATION_FAILED",
-            message: "The mock lesson plan failed validation.",
-
-        },
-    };
+    throw new Error(
+        `Failed to generate a valid lesson plan after ${MAX_ATTEMPTS} attempts. ${
+            validationErrors.join("; ")
+        }`,
+    );
 }
 
 

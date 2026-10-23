@@ -42,21 +42,8 @@ export async function POST(request: NextRequest) {
             parsed.data.durationMinutes,
         );
 
-        if (!result.success) {
-            const status = ERROR_STATUS[result.error.code] ?? 500;
-
-            return NextResponse.json(
-                {
-                    error: result.error.message,
-                    code: result.error.code,
-
-                },
-                { status },
-            );
-        }
-
         return NextResponse.json(
-            { data: result.data },
+            { data: result },
             { status: 200 },
         );
     } catch (error) {
