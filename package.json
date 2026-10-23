@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "db:seed:users": "tsx scripts/seed-users.ts",
-    "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts"
+    "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@hookform/resolvers": "^6.0.0",
@@ -37,11 +39,14 @@
     "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
     "drizzle-kit": "^1.0.0-rc.4",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.3.5",
+    "vitest": "^4.1.12"
   }
 }

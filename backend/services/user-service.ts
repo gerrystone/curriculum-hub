@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import {db} from "@/db/drizzle";
 import {users} from "@/db/schema";
+import {UserRole} from "@/features/authentication/types";
 
 export async function getUserById(id: string) {
     const [user] = await db
@@ -16,4 +17,7 @@ export async function getUserById(id: string) {
         .limit(1);
 
     return user ?? null;
+}
+export function hasRequiredRole(actualRole: UserRole, allowedRoles: UserRole[],): boolean {
+    return allowedRoles.includes(actualRole);
 }

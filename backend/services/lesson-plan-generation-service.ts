@@ -16,17 +16,6 @@ export type LessonPlanValidationResult =
     valid: false;
     errors: string[];
 };
-
-export type LessonPlanErrorCode =
-    | "OUTCOME_NOT_FOUND"
-    | "INSUFFICIENT_GROUNDING"
-    | "VALIDATION_FAILED"
-    | "GENERATION_PROVIDER_ERROR";
-type LessonPlanError = {
-    code: LessonPlanErrorCode;
-    message: string;
-
-};
 export type LessonPlanGenerationResult = {
     plan: LessonPlan;
     groundingStatus: "grounded";
