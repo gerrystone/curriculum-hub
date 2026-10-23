@@ -1,68 +1,17 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {LessonPlan} from "@/backend/lib/validation/lesson-plan-validation";
+import {GeneratedLessonPlanProps} from "@/features/teacher/types";
+import TextAreaField from "@/app/components/TextAreaField";
+import ListTextAreaField from "@/app/components/ListTextAreaField";
+import {useSaveLessonPlan} from "@/features/lessons/hooks/useCurriculum";
+import {toast} from "react-toastify";
+import {Button} from "@/app/components/Button";
 
-export type LessonPlanSource = {
-    chunkId: string;
-    documentTitle: string;
-    sourceEntryId: string;
-    topic: string;
-};
-
-export type LessonPlanGenerationSuccess = {
-    data: {
-        groundingStatus: "grounded";
-        plan: LessonPlan;
-        sources: LessonPlanSource[];
-    };
-};
-type LessonPlanEditorProps = {
-    data: LessonPlanGenerationSuccess["data"];
-    onSave?: (plan: LessonPlan) => void;
-};
-
-function TextAreaField({label, value, onChange, rows = 2, hint,}: { label: string; value: string; onChange: (value: string) => void; rows?: number; hint?: string; }) {
-    return (
-        <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-                {label}
-            </label>
-
-            <textarea
-                value={value}
-                rows={rows}
-                onChange={(event) => onChange(event.target.value)}
-                className="block w-full resize-y rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 shadow-sm outline-none transition placeholder:text-gray-400 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"
-            />
-
-            {hint && (
-                <p className="text-xs text-gray-500">{hint}</p>
-            )}
-        </div>
-    );
-}
-
-function ListTextAreaField({label, items, onChange,}: { label: string; items: string[]; onChange: (items: string[]) => void; }) {
-    return (
-        <TextAreaField
-            label={label}
-            value={items.join("\n")}
-            onChange={(value) =>
-                onChange(
-                    value === "" ? [] : value.split("\n")
-                )
-            }
-            rows={Math.max(3, items.length)}
-            hint="Enter one item per line."
-        />
-    );
-}
-
-export default function GeneratedLessonPlan({data, onSave,}: LessonPlanEditorProps) {
+export default function GeneratedLessonPlan({data, clearPlan,}: GeneratedLessonPlanProps) {
     const [plan, setPlan] = useState<LessonPlan>(data.plan);
-
     function updatePlan<K extends keyof LessonPlan>(
         key: K,
         value: LessonPlan[K],
@@ -125,6 +74,22 @@ export default function GeneratedLessonPlan({data, onSave,}: LessonPlanEditorPro
         }));
     }
 
+    const saveLessonPlanMutation = useSaveLessonPlan()
+
+    const handleSaveLessonPlan = () =>{
+        const payload = {
+            plan,
+            topic: plan.title,
+            sources: data.sources,
+            groundingStatus: data.groundingStatus,
+        }
+        saveLessonPlanMutation.mutate(payload, {
+            onSuccess:()=>{
+                toast.success("Lesson plan saved successfully")
+                clearPlan()
+            }
+        })
+    }
     return (
         <div className="mx-auto max-w-5xl space-y-6 pb-10">
             <header>
@@ -405,13 +370,11 @@ export default function GeneratedLessonPlan({data, onSave,}: LessonPlanEditorPro
                     Reset changes
                 </button>
 
-                <button
-                    type="button"
-                    onClick={() => onSave?.(plan)}
-                    className="rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
-                >
-                    Save lesson plan
-                </button>
+               <Button onClick={handleSaveLessonPlan}  disabled={saveLessonPlanMutation.isPending}>
+                   {
+                       saveLessonPlanMutation.isPending ? "Saving..." : "Save Lesson Plan"
+                   }
+               </Button>
             </div>
         </div>
     );

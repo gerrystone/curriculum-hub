@@ -1,7 +1,15 @@
 import {useMutation, useQuery} from "@tanstack/react-query";
 import {apiClient} from "@/app/lib/api-client";
-import {LessonGenerationResponse, LessonPlanGenerationResult} from "@/backend/services/lesson-plan-generation-service";
-import {LessonPlanGenerationSuccess} from "@/features/teacher/components/GeneratedLessonPlan";
+import {LessonPlanGenerationSuccess} from "@/features/teacher/types";
+import {LessonPlan} from "@/backend/lib/validation/lesson-plan-validation";
+import {LessonPlanGenerationResult} from "@/backend/services/lesson-plan-generation-service";
+
+export type SaveLessonPlanRequest = {
+    plan: LessonPlan;
+    topic: string;
+    sources: LessonPlanGenerationResult["sources"];
+    groundingStatus: "grounded";
+};
 
 export type LearningOutcome =  {
     outcomeId: string;
@@ -39,6 +47,18 @@ export const useGenerateLessonPlan = ()=>{
                 request,
             );
 
+            return response.data;
+        }
+    })
+}
+
+export const useSaveLessonPlan = ()=>{
+    return useMutation({
+        mutationFn:async (request:SaveLessonPlanRequest)=>{
+            const response = await apiClient.post(
+                "/lesson-plans/save",
+                request,
+            );
             return response.data;
         }
     })

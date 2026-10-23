@@ -3,9 +3,8 @@ import {useCurriculum, useGenerateLessonPlan} from "@/features/lessons/hooks/use
 import {useState} from "react";
 import {Button} from "@/app/components/Button";
 import {toast} from "react-toastify";
-import {LessonPlan} from "@/backend/lib/validation/lesson-plan-validation";
-import GeneratedLessonPlan, {LessonPlanGenerationSuccess} from "@/features/teacher/components/GeneratedLessonPlan";
 import {LessonPlanGenerationResult} from "@/backend/services/lesson-plan-generation-service";
+import GeneratedLessonPlan from "@/features/teacher/components/GeneratedLessonPlan";
 
 export default function GenerateLessonPlan() {
     const [subject, setSubject] = useState("");
@@ -49,6 +48,9 @@ export default function GenerateLessonPlan() {
                 },
             },
         );
+    };
+    const clearPlan = () => {
+        setLessonPlan(null);
     };
     return (
         <div className="grid grid-cols-2 gap-6">
@@ -198,7 +200,7 @@ export default function GenerateLessonPlan() {
             <div>
                 {
                     lessonPlan && (
-                        <GeneratedLessonPlan data={lessonPlan} />
+                        <GeneratedLessonPlan data={lessonPlan} clearPlan={clearPlan} />
                     )
                 }
             </div>

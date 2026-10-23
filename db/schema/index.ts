@@ -13,6 +13,7 @@ import {
     check,
 } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
+import {LessonPlanGenerationResult} from "@/backend/services/lesson-plan-generation-service";
 
 export const userRoleEnum = pgEnum("user_role", [
     "teacher",
@@ -105,22 +106,6 @@ export const teacherCurriculumLeads = pgTable(
 );
 
 
-export type LessonPlanContent = {
-    learningOutcomes?: string[];
-    introduction?: string;
-    learningActivities?: {
-        name: string;
-        durationMinutes?: number;
-        teacherActions?: string[];
-        learnerActions?: string[];
-        resources?: string[];
-    }[];
-    assessment?: string[];
-    differentiation?: string;
-    resources?: string[];
-    reflection?: string;
-};
-
 // 3. Lesson plans
 export const lessonPlans = pgTable(
     "lesson_plans",
@@ -174,7 +159,6 @@ export const lessonPlans = pgTable(
     ],
 );
 
-// 4. Lesson-plan versions
 export const lessonPlanVersions = pgTable(
     "lesson_plan_versions",
     {
@@ -187,7 +171,7 @@ export const lessonPlanVersions = pgTable(
         version: integer("version").notNull(),
 
         content: jsonb("content")
-            .$type<LessonPlanContent>()
+            .$type<LessonPlanGenerationResult>()
             .notNull(),
 
         status: lessonPlanVersionStatusEnum("status")

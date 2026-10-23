@@ -42,7 +42,15 @@ export async function generateLessonPlan(outcomeId: string, durationMinutes: num
     const { context, chunks } = retrieval;
     let validationErrors: string[] = [];
 
+
+
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        //For testing generation failure
+       /* const generation = {
+            success: true as const,
+            output: {},
+            message: "testing generation failure",
+        };*/
         const generation = generateMockLessonPlan({
             context,
             chunks,
