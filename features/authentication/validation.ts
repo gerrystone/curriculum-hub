@@ -4,3 +4,5 @@ export const loginSchema = z.object({
     email: z.string().trim().email().max(255),
     password: z.string().min(1).max(1024),
 });
+
+export type LoginFormValues = z.infer<typeof loginSchema>;
