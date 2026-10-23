@@ -26,7 +26,6 @@ export type AvatarProps = {
 
 export type HeaderProps = {
   user: DashboardUser;
-  title?: string;
 };
 
 export type DashboardComponentProps = {

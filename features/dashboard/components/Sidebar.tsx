@@ -10,9 +10,9 @@ import {menuItems} from "@/features/dashboard/sidebar-menu";
 export default function Sidebar({role}:SidebarProps) {
     const pathname = usePathname();
     return (
-        <div className="flex h-full w-full flex-col bg-field border-r border-line">
-            <div className="flex h-16 shrink-0 items-center gap-2 px-5 border-b border-line">
-                <span className="inline-block h-6 w-6 rounded-md bg-brand" />
+        <div className="flex h-full w-full flex-col bg-stone-100">
+            <div className="flex h-16 shrink-0 items-center gap-2 px-5 border-b border-gray-400">
+                <h6 className={"font-semibold text-teal-900 text-xl"}>Curriculum Hub</h6>
             </div>
 
             {/* Only the nav list scrolls if there are more items than fit; never the page */}

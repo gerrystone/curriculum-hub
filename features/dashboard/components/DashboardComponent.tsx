@@ -13,7 +13,7 @@ export default function DashboardComponent({children}: DashboardComponentProps) 
     const {data:user, isLoading} = useCurrentUser();
   return (
 
-    <div className="flex h-dvh overflow-hidden bg-page text-ink">
+    <div className="flex h-dvh overflow-hidden text-ink">
         <aside className="hidden w-64 shrink-0 lg:block">
             {isLoading ? (
                 <p>Loading...</p>
@@ -22,21 +22,19 @@ export default function DashboardComponent({children}: DashboardComponentProps) 
             ) : null}
         </aside>
 
-    
 
-      <div className="flex min-w-0 flex-1 flex-col">
-          {isLoading ? (
-              <p>Loading...</p>
-          ) : user ? (
-              <Header
-                  user={user}
-                  title={"Curriculum Hub"}
 
-              />
-          ) : null}
+        <main className="min-h-0 flex-1 overflow-y-auto px-4 pt-1">
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : user ? (
+                <Header
+                    user={user}
 
-        <main className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">{children}</main>
-      </div>
+
+                />
+            ) : null}
+            {children}</main>
     </div>
   );
 }
