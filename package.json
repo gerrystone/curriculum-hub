@@ -11,6 +11,7 @@
     "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.104.5",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
     "dotenv": "^18.0.8",

@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent, useRef, useState } from "react";
-import {useRouter} from "next/router";
 
 type FieldErrors = { email?: string; password?: string };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function LoginPage() {
+    const router = useRouter();
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -17,10 +18,13 @@ export default function LoginPage() {
     const [remember, setRemember] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState<FieldErrors>({});
-    const [formError, setFormError] = useState<string | null>(null);
-    const [loading, setLoading] = useState(false);
 
-    const router = useRouter();
+  /*  const mutation = useMutation({
+        mutationFn: login,
+        onSuccess: (data) => {
+            router.push(data.redirectTo ?? "/dashboard");
+        },
+    });*/
 
     function validate(): FieldErrors {
         const next: FieldErrors = {};
@@ -31,65 +35,49 @@ export default function LoginPage() {
         return next;
     }
 
-    async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    function onSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        setFormError(null);
+       /* mutation.reset();
 
         const next = validate();
         setErrors(next);
         if (next.email) return emailRef.current?.focus();
         if (next.password) return passwordRef.current?.focus();
 
-        setLoading(true);
-        try {
-
-            const res = await fetch("/api/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-             body: JSON.stringify({ email: email.trim(), password, remember }),
-            });
-             if (!res.ok) throw new Error("invalid");
-            console.log(res, "response")
-            await new Promise((r) => setTimeout(r, 900));
-            throw new Error("invalid");
-        } catch {
-            setFormError(
-                "That email and password don’t match. Check both and try again, or reset your password."
-            );
-        } finally {
-            setLoading(false);
-        }
+        mutation.mutate({ email: email.trim(), password, remember });*/
     }
 
+    /*const loading = mutation.isPending;*/
+
     const inputBase =
-        "w-full rounded-lg border bg-field px-3.5 py-2.5 text-base placeholder:text-mute/70 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand";
+        "w-full rounded-lg border bg-white px-3.5 py-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-700 focus:border-teal-700";
 
     return (
-        <div className="min-h-full grid lg:grid-cols-2">
+        <div className="grid min-h-full lg:grid-cols-2">
             <main className="flex items-center justify-center px-6 py-12 sm:px-12">
                 <div className="w-full max-w-sm">
-                    <div className="flex items-center gap-2 mb-10">
-                        <span className="inline-block h-6 w-6 rounded-md bg-brand" />
-                        <span className="font-display font-bold text-lg tracking-tight">Northbeam</span>
+                    <div className="mb-10 flex items-center gap-2">
+                        <span className="inline-block h-6 w-6 rounded-md bg-teal-900" />
+                        <span className="font-display text-lg font-bold tracking-tight">Northbeam</span>
                     </div>
 
                     <h1 className="font-display text-3xl font-bold tracking-tight">
                         Sign in to your workspace
                     </h1>
-                    <p className="mt-2 text-mute">Use the email you signed up with.</p>
+                    <p className="mt-2 text-slate-600">Use the email you signed up with.</p>
 
-                    {formError && (
+                  {/*  {mutation.isError && (
                         <div
                             role="alert"
-                            className="mt-6 rounded-lg border border-danger px-4 py-3 text-sm text-danger"
+                            className="mt-6 rounded-lg border border-red-600 bg-red-50 px-4 py-3 text-sm text-red-700"
                         >
-                            {formError}
+                            {mutation.error.message}
                         </div>
-                    )}
+                    )}*/}
 
                     <form onSubmit={onSubmit} noValidate className="mt-8 space-y-5">
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium mb-1.5">
+                            <label htmlFor="email" className="mb-1.5 block text-sm font-medium">
                                 Email
                             </label>
                             <input
@@ -107,23 +95,23 @@ export default function LoginPage() {
                                 }}
                                 aria-invalid={!!errors.email}
                                 aria-describedby={errors.email ? "email-error" : undefined}
-                                className={`${inputBase} ${errors.email ? "border-danger" : "border-line"}`}
+                                className={`${inputBase} ${errors.email ? "border-red-600" : "border-slate-300"}`}
                             />
                             {errors.email && (
-                                <p id="email-error" className="mt-1.5 text-sm text-danger">
+                                <p id="email-error" className="mt-1.5 text-sm text-red-700">
                                     {errors.email}
                                 </p>
                             )}
                         </div>
 
                         <div>
-                            <div className="flex items-center justify-between mb-1.5">
+                            <div className="mb-1.5 flex items-center justify-between">
                                 <label htmlFor="password" className="block text-sm font-medium">
                                     Password
                                 </label>
                                 <Link
                                     href="/forgot-password"
-                                    className="text-sm text-mute underline underline-offset-4 hover:text-ink rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                                    className="rounded text-sm text-slate-600 underline underline-offset-4 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
                                 >
                                     Forgot password?
                                 </Link>
@@ -142,62 +130,60 @@ export default function LoginPage() {
                                     }}
                                     aria-invalid={!!errors.password}
                                     aria-describedby={errors.password ? "password-error" : undefined}
-                                    className={`${inputBase} pr-16 ${errors.password ? "border-danger" : "border-line"}`}
+                                    className={`${inputBase} pr-16 ${errors.password ? "border-red-600" : "border-slate-300"}`}
                                 />
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword((s) => !s)}
                                     aria-controls="password"
                                     aria-pressed={showPassword}
-                                    className="absolute inset-y-0 right-0 px-3.5 text-sm font-medium text-mute hover:text-ink rounded-r-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                                    className="absolute inset-y-0 right-0 rounded-r-lg px-3.5 text-sm font-medium text-slate-600 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
                                 >
                                     {showPassword ? "Hide" : "Show"}
                                 </button>
                             </div>
                             {errors.password && (
-                                <p id="password-error" className="mt-1.5 text-sm text-danger">
+                                <p id="password-error" className="mt-1.5 text-sm text-red-700">
                                     {errors.password}
                                 </p>
                             )}
                         </div>
 
-                        <label className="flex items-center gap-2.5 text-sm select-none cursor-pointer">
+                        <label className="flex cursor-pointer select-none items-center gap-2.5 text-sm">
                             <input
                                 type="checkbox"
                                 name="remember"
                                 checked={remember}
                                 onChange={(e) => setRemember(e.target.checked)}
-                                className="h-4 w-4 rounded border-line accent-[var(--brand)]"
+                                className="h-4 w-4 rounded border-slate-300 accent-teal-900"
                             />
                             Keep me signed in on this device
                         </label>
-
                         <button
                             type="submit"
-                            disabled={loading}
-                            className="w-full rounded-lg bg-brand text-onbrand font-semibold py-3 transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand disabled:opacity-60 disabled:cursor-not-allowed"
+
+                            className="w-full rounded-lg bg-teal-900 py-3 font-semibold text-white transition hover:bg-teal-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+                        >
+                           Sign In
+                        </button>
+                        {/*<button
+                            type="submit"
+                            disabled={loading || mutation.isSuccess}
+                            className="w-full rounded-lg bg-teal-900 py-3 font-semibold text-white transition hover:bg-teal-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
                         >
                             {loading ? "Signing in…" : "Sign in"}
-                        </button>
+                        </button>*/}
                     </form>
 
-                    <p className="mt-8 text-sm text-mute">
-                        New to Northbeam?{" "}
-                        <Link
-                            href="/signup"
-                            className="text-ink font-medium underline underline-offset-4 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                        >
-                            Create an account
-                        </Link>
-                    </p>
+
                 </div>
             </main>
 
-            <aside className="hidden lg:flex flex-col justify-end p-14 bg-panel">
-                <p className="font-display text-4xl font-semibold leading-tight tracking-tight max-w-md text-[#eaf3ef]">
+            <aside className="hidden flex-col justify-end bg-teal-900 p-14 lg:flex">
+                <p className="max-w-md font-display text-4xl font-semibold leading-tight tracking-tight text-teal-50">
                     Every roadmap decision, with the evidence next to it.
                 </p>
-                <p className="mt-4 max-w-sm text-base text-[#b9cfc8]">
+                <p className="mt-4 max-w-sm text-base text-teal-200">
                     Pick up where your team left off: priorities, feedback, and launch plans in one place.
                 </p>
             </aside>
