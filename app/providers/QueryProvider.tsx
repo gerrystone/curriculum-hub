@@ -24,9 +24,7 @@ export function QueryProvider({ children }: QueryProviderProps) {
 
     return (
         <QueryClientProvider client={queryClient}>
-           <SessionProvider>
-               {children}
-           </SessionProvider>
+            {children}
         </QueryClientProvider>
     );
 }
