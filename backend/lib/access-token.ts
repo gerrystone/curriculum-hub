@@ -1,5 +1,6 @@
 
-import { SignJWT } from "jose";
+import {JWTPayload, jwtVerify, SignJWT} from "jose";
+import {UserRole} from "@/features/authentication/types";
 
 const ACCESS_TOKEN_TTL_SECONDS = 8 * 60 * 60;
 
@@ -19,8 +20,14 @@ type AuthenticatedUser = {
     id: string;
     name: string;
     email: string;
-    role: "teacher" | "curriculum_lead";
+    role: UserRole;
 };
+
+export type AccessTokenPayload = JWTPayload &
+    Pick<AuthenticatedUser, "name" | "role"> & {
+    sub: AuthenticatedUser["id"];
+};
+
 
 export async function createAccessToken(
     user: AuthenticatedUser,
@@ -46,4 +53,29 @@ export async function createAccessToken(
         expiresIn: ACCESS_TOKEN_TTL_SECONDS,
         expiresAt: new Date(expiresAt * 1000).toISOString(),
     };
+}
+
+export async function verifyAccessToken(
+    token: string,
+): Promise<AccessTokenPayload> {
+    const {payload} = await jwtVerify(
+        token,
+        getAccessTokenSecret(),
+        {
+            algorithms: ["HS256"],
+            issuer: "curriculum-design-hub",
+            audience: "curriculum-design-hub-api",
+        },
+    );
+
+    if (
+        typeof payload.sub !== "string" ||
+        typeof payload.name !== "string" ||
+        (payload.role !== "teacher" &&
+            payload.role !== "curriculum_lead")
+    ) {
+        throw new Error("Invalid access token payload.");
+    }
+
+    return payload as AccessTokenPayload;
 }

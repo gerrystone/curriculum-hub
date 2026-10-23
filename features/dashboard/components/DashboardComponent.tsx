@@ -5,28 +5,36 @@ import { usePathname } from "next/navigation";
 import { DashboardComponentProps } from "../types";
 import Sidebar from "./Sidebar";
 import Header from "./HeaderComponent";
+import {useCurrentUser} from "@/features/authentication/services/hooks/useCurrentUser";
 
 
 
-export default function DashboardComponent({brand,navItems,user,title,sidebarFooter,children,}: DashboardComponentProps) {
-
-
+export default function DashboardComponent({children}: DashboardComponentProps) {
+    const {data:user, isLoading} = useCurrentUser();
   return (
-    // The shell fills the viewport and clips overflow, so only <main> scrolls.
+
     <div className="flex h-dvh overflow-hidden bg-page text-ink">
-      {/* Desktop sidebar: fixed width, part of the flex row, never scrolls with content */}
-      <aside className="hidden w-64 shrink-0 lg:block">
-        <Sidebar brand={brand} items={navItems} footer={sidebarFooter} />
-      </aside>
+        <aside className="hidden w-64 shrink-0 lg:block">
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : user ? (
+                <Sidebar role={user.role} />
+            ) : null}
+        </aside>
 
     
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <Header
-          user={user}
-          title={title}
-        
-        />
+          {isLoading ? (
+              <p>Loading...</p>
+          ) : user ? (
+              <Header
+                  user={user}
+                  title={"Curriculum Hub"}
+
+              />
+          ) : null}
+
         <main className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">{children}</main>
       </div>
     </div>

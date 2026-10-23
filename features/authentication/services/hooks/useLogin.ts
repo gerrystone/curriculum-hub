@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import {LoginFormValues} from "@/features/authentication/validation";
 import {authService} from "@/features/authentication/services/auth.service";
 
-export function useAuth() {
+export function useLogin() {
     return useMutation({
         mutationKey: ["auth", "login"],
         mutationFn: (credentials: LoginFormValues) =>

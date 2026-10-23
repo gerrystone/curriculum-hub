@@ -11,18 +11,24 @@
     "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^6.0.0",
     "@tanstack/react-query": "^5.104.5",
+    "axios": "^1.20.0",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
     "dotenv": "^18.0.8",
     "drizzle-orm": "^1.0.0-rc.4",
     "drizzle-seed": "^0.3.1",
     "jose": "^6.2.13",
+    "lucide-react": "^1.61.0",
     "next": "16.4.2",
     "next-auth": "^4.24.15",
     "pg": "^8.23.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-hook-form": "^7.90.0",
+    "react-toastify": "^11.1.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

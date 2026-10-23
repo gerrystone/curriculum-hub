@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import {UserRole} from "@/features/authentication/types";
 
 export type NavItem = {
     label: string;
@@ -13,10 +14,7 @@ export type DashboardUser = {
 };
 
 export type SidebarProps = {
-    brand: string;
-    items: NavItem[];
-    footer?: React.ReactNode;
-    onNavigate?: () => void;
+    role: UserRole;
 };
 
 export type AvatarProps = {
@@ -32,10 +30,5 @@ export type HeaderProps = {
 };
 
 export type DashboardComponentProps = {
-  brand: string;
-  navItems: NavItem[];
-  user: DashboardUser;
-  title?: string;
-  sidebarFooter?: React.ReactNode;
   children: React.ReactNode;
 };

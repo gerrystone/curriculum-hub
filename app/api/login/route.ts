@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
         const token = await createAccessToken(user);
 
-        return NextResponse.json(
+        return  NextResponse.json(
             {
                 name: user.name,
                 role: user.role,
@@ -52,11 +52,10 @@ export async function POST(request: Request) {
             },
             {
                 status: 200,
-                headers: {
-                    "Cache-Control": "no-store",
-                },
+
             },
         );
+
     } catch (error) {
         console.error("Login failed:", error);
 
