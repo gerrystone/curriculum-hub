@@ -1,4 +1,5 @@
 
+import "dotenv/config";
 import { spawn } from "node:child_process";
 
 type CommandResult = {
@@ -11,6 +12,7 @@ function runCommand({ command, args }: CommandResult): Promise<void> {
         const child = spawn(command, args, {
             stdio: "inherit",
             shell: process.platform === "win32",
+            env: process.env,
         });
 
         child.on("error", reject);
@@ -23,8 +25,8 @@ function runCommand({ command, args }: CommandResult): Promise<void> {
 
             reject(
                 new Error(
-                    `${command} ${args.join(" ")} failed` +
-                    ` (exit code: ${code ?? signal ?? "unknown"}).`,
+                    `${command} ${args.join(" ")} failed ` +
+                    `(exit code: ${code ?? signal ?? "unknown"}).`,
                 ),
             );
         });
@@ -34,11 +36,17 @@ function runCommand({ command, args }: CommandResult): Promise<void> {
 async function main(): Promise<void> {
     console.log("\nStarting Docker Compose services...");
 
-    // Starts the services required by local development and waits
-    // for their health checks to pass.
     await runCommand({
         command: "docker",
-        args: ["compose", "up", "-d", "--wait", "db"],
+        args: [
+            "compose",
+            "--env-file",
+            ".env.local",
+            "up",
+            "-d",
+            "--wait",
+            "postgres",
+        ],
     });
 
     console.log("\nApplying database migrations...");
@@ -68,12 +76,6 @@ async function main(): Promise<void> {
 
 main().catch((error: unknown) => {
     console.error("\nLocal development setup failed.");
-
-    if (error instanceof Error) {
-        console.error(error.message);
-    } else {
-        console.error(error);
-    }
-
+    console.error(error);
     process.exitCode = 1;
 });
