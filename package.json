@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:seed:users": "tsx scripts/seed-users.ts",
+    "db:seed:teacher-curriculum-leads": "tsx scripts/seed-teacher-curriculum-leads.ts"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^18.0.8",
     "drizzle-orm": "^1.0.0-rc.4",
+    "drizzle-seed": "^0.3.1",
     "jose": "^6.2.13",
     "next": "16.4.2",
     "next-auth": "^4.24.15",

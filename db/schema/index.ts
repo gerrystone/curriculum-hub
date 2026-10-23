@@ -37,7 +37,7 @@ export const lessonPlanVersionStatusEnum = pgEnum(
     ["draft", "submitted", "approved", "rejected"],
 );
 
-// 1. Users
+
 export const users = pgTable(
     "users",
     {
