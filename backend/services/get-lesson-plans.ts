@@ -1,6 +1,6 @@
 import {and, desc, eq} from "drizzle-orm";
 import {db} from "@/db/drizzle";
-import {lessonPlans, lessonPlanVersions} from "@/db/schema";
+import {lessonPlans, lessonPlanVersions, users} from "@/db/schema";
 
 
 export const getLessonPlans = async () => {
@@ -13,12 +13,13 @@ export const getLessonPlans = async () => {
             topic: lessonPlans.topic,
             status: lessonPlans.status,
             currentVersion: lessonPlans.currentVersion,
-            createdBy: lessonPlans.createdBy,
+            createdBy: users.name,
             createdAt: lessonPlans.createdAt,
             updatedAt: lessonPlans.updatedAt,
             content: lessonPlanVersions.content,
         })
         .from(lessonPlans)
+        .innerJoin(users, eq(lessonPlans.createdBy, users.id))
         .leftJoin(
             lessonPlanVersions,
             and(
